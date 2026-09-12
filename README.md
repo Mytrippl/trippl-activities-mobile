@@ -96,6 +96,54 @@ The module handles:
 - Language titles
 - Consistent language information across activity options
 
+### Activity Result Processing
+
+Activity search results can be processed before presentation using dedicated filtering and sorting utilities.
+
+Results can be filtered using:
+
+- Minimum and maximum price
+- Minimum rating
+- Free-cancellation availability
+- Instant confirmation
+- Minimum and maximum duration
+- Guide language
+- Current bookability
+
+Results can also be ordered by price, rating, review count, and duration while preserving the original provider ordering when recommended sorting is selected.
+
+### Pricing and Availability Processing
+
+Pricing utilities normalize different activity pricing structures, including per-person and per-group pricing. They calculate traveler-adjusted totals and expose original pricing and discount information when available.
+
+Availability processing evaluates bookability, remaining capacity, available time slots, requested traveler counts, and the earliest available time.
+
+### Traveler Validation
+
+Traveler validation maps passenger ages against activity age bands and checks:
+
+- Minimum traveler requirements
+- Maximum traveler requirements
+- Supported age ranges
+- Traveler category assignment
+- Unsupported traveler ages
+
+This allows invalid traveler combinations to be identified before an availability or booking request is prepared.
+
+### Search Request Construction
+
+The activity search request layer normalizes:
+
+- Destination and product identifiers
+- Travel dates
+- Adult, child, and infant counts
+- Currency and language
+- Pagination
+- Price and rating filters
+- Free-cancellation preferences
+
+Optional and empty values are omitted from generated request payloads.
+
 ## Repository Structure
 
 ```text
