@@ -104,3 +104,4 @@ export 'activity_core/models/sync_conflict.dart';
 export 'activity_core/models/sync_ack.dart';
 export 'activity_core/models/device_checkpoint.dart';
 export 'activity_core/models/activity_export_policy.dart';
+export 'activity_core/models/export_bundle.dart';

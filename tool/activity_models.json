@@ -4888,5 +4888,65 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityExportBundle",
+    "export_bundle",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "createdAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "format",
+        "String",
+        true,
+        null
+      ],
+      [
+        "content",
+        "String",
+        true,
+        null
+      ],
+      [
+        "digest",
+        "String",
+        true,
+        null
+      ],
+      [
+        "itemCount",
+        "int",
+        true,
+        null
+      ],
+      [
+        "warningCodes",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "schemaVersion",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]
