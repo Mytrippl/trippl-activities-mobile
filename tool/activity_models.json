@@ -472,5 +472,59 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityEligibility",
+    "eligibility",
+    [
+      [
+        "evaluatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "eligible",
+        "bool",
+        true,
+        null
+      ],
+      [
+        "totalTravelers",
+        "int",
+        true,
+        null
+      ],
+      [
+        "unsupportedTravelerIds",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "reasonCodes",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "assignedCategories",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "capacityTravelers",
+        "int",
+        false,
+        0
+      ],
+      [
+        "requiresReview",
+        "bool",
+        false,
+        false
+      ]
+    ]
   ]
 ]

@@ -11,3 +11,4 @@ export 'activity_core/models/guide_language.dart';
 export 'activity_core/models/age_band.dart';
 export 'activity_core/models/traveler.dart';
 export 'activity_core/models/traveler_mix.dart';
+export 'activity_core/models/eligibility.dart';
