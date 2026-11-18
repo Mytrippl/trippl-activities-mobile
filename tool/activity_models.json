@@ -4684,5 +4684,59 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivitySyncConflict",
+    "sync_conflict",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "resourceId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "localDigest",
+        "String",
+        true,
+        null
+      ],
+      [
+        "remoteDigest",
+        "String",
+        true,
+        null
+      ],
+      [
+        "remoteRevision",
+        "int",
+        true,
+        null
+      ],
+      [
+        "detectedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "resolution",
+        "String",
+        false,
+        "unresolved"
+      ],
+      [
+        "fieldNames",
+        "List<String>",
+        false,
+        []
+      ]
+    ]
   ]
 ]

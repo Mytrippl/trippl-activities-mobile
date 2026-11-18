@@ -78,5 +78,6 @@
   "ActivityActivityConsent": "if(revision<1||!{'history','draftDetails','analytics','reminders'}.contains(purpose)||expiresAt!=null&&!expiresAt!.isAfter(recordedAt))",
   "ActivityHistoryEntry": "if(revision<1||count<1||count>1000000||text!=null&&text!.length>200||!{'search','view','save','booking'}.contains(kind))",
   "ActivitySyncMutation": "if(expectedRevision<1||attempts>5||!RegExp(r'^[a-f0-9]{64}$').hasMatch(payloadDigest)||!{'upsert','delete'}.contains(kind)||!{'pending','sending','acknowledged','failed'}.contains(state))",
-  "ActivitySyncBatch": "if(generation<1||mutations.map((m)=>m.id).toSet().length!=mutations.length||mutations.any((m)=>m.scope!=scope))"
+  "ActivitySyncBatch": "if(generation<1||mutations.map((m)=>m.id).toSet().length!=mutations.length||mutations.any((m)=>m.scope!=scope))",
+  "ActivitySyncConflict": "if(remoteRevision<1||!{'unresolved','keepLocal','keepRemote','manual'}.contains(resolution)||!RegExp(r'^[a-f0-9]{64}$').hasMatch(localDigest)||!RegExp(r'^[a-f0-9]{64}$').hasMatch(remoteDigest))"
 }
