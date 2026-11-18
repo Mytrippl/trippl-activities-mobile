@@ -3232,5 +3232,59 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityReconciliation",
+    "reconciliation",
+    [
+      [
+        "bookingId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "evaluatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "previousState",
+        "String",
+        true,
+        null
+      ],
+      [
+        "nextState",
+        "String",
+        true,
+        null
+      ],
+      [
+        "accepted",
+        "bool",
+        true,
+        null
+      ],
+      [
+        "reasonCodes",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "requiresReview",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "remoteRevision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]

@@ -55,5 +55,6 @@
   "ActivityBookingReceipt": "if(revision<1||!{'pending','confirmed','rejected','unknown'}.contains(state)||state=='confirmed'&&(bookingId==null||total==null)||!RegExp(r'^[a-f0-9]{64}$').hasMatch(draftFingerprint))",
   "ActivityBookingStatus": "if(revision<1||!{'pending','confirmed','rejected','cancelPending','cancelled','unknown'}.contains(state))",
   "ActivityBookingRecord": "if(revision<1||updatedAt.isBefore(createdAt)||!{'pending','confirmed','rejected','cancelPending','cancelled','unknown'}.contains(state))",
-  "ActivityBookingEvent": "if(revision<1||!{'submitted','pending','confirmed','rejected','cancelRequested','cancelled','reconciled','unknown'}.contains(kind))"
+  "ActivityBookingEvent": "if(revision<1||!{'submitted','pending','confirmed','rejected','cancelRequested','cancelled','reconciled','unknown'}.contains(kind))",
+  "ActivityReconciliation": "if(remoteRevision<1)"
 }
