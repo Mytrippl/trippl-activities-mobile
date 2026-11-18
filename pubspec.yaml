@@ -1,0 +1,10 @@
+name: trippl_activities_mobile
+description: Mytrippl activity discovery traveler eligibility pricing and availability.
+publish_to: none
+version: 1.0.0
+environment:
+  sdk: '>=3.10.0 <4.0.0'
+dependencies:
+  crypto: 3.0.8
+dev_dependencies:
+  test: 1.31.1
