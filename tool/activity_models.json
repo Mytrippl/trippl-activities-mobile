@@ -1426,5 +1426,65 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityAvailabilityRequest",
+    "availability_request",
+    [
+      [
+        "productId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "optionId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "travelDate",
+        "day",
+        true,
+        null
+      ],
+      [
+        "travelers",
+        "ActivityTravelerMix",
+        true,
+        null
+      ],
+      [
+        "currency",
+        "String",
+        true,
+        null
+      ],
+      [
+        "language",
+        "String",
+        false,
+        "en"
+      ],
+      [
+        "selectedSlotId",
+        "String",
+        false,
+        null
+      ],
+      [
+        "selectedLanguage",
+        "String",
+        false,
+        null
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]

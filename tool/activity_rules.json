@@ -25,5 +25,6 @@
   "ActivityOption": "if(minimumTravelers<1||maximumTravelers>100||minimumTravelers>maximumTravelers||priceRules.map((p)=>p.id).toSet().length!=priceRules.length)",
   "ActivityProduct": "if(revision<1||observedAt!=null&&expiresAt!=null&&!expiresAt!.isAfter(observedAt!)||options.any((o)=>o.productId!=id)||options.map((o)=>o.id).toSet().length!=options.length)",
   "ActivitySlot": "if(revision<1||!expiresAt.isAfter(observedAt)||endsAt!=null&&!endsAt!.isAfter(startsAt)||remainingCapacity!=null&&remainingCapacity!>100000||!{'unknown','available','soldOut','unavailable'}.contains(state))",
-  "ActivityAvailability": "if(travelerCount<1||travelerCount>100||!{'unknown','available','unavailable','insufficientCapacity','stale'}.contains(state)||slots.any((s)=>s.productId!=productId||s.optionId!=optionId)||slots.map((s)=>s.id).toSet().length!=slots.length)"
+  "ActivityAvailability": "if(travelerCount<1||travelerCount>100||!{'unknown','available','unavailable','insufficientCapacity','stale'}.contains(state)||slots.any((s)=>s.productId!=productId||s.optionId!=optionId)||slots.map((s)=>s.id).toSet().length!=slots.length)",
+  "ActivityAvailabilityRequest": "if(revision<1||!RegExp(r'^[A-Z]{3}$').hasMatch(currency)||language.length>20)"
 }
