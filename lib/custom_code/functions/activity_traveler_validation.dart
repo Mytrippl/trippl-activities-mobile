@@ -133,10 +133,10 @@ List<Map<String, dynamic>> _normalizeAgeBands(
       'category': category?.toString().toLowerCase() ??
           'traveler',
       'minAge': _travelerAge(
-        map['minAge'] ?? map['minimumAge'] ?? map['from'],
+        map['startAge'] ?? map['minAge'] ?? map['minimumAge'] ?? map['from'],
       ),
       'maxAge': _travelerAge(
-        map['maxAge'] ?? map['maximumAge'] ?? map['to'],
+        map['endAge'] ?? map['maxAge'] ?? map['maximumAge'] ?? map['to'],
       ),
     });
   }
