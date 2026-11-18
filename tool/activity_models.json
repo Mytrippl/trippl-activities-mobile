@@ -3286,5 +3286,53 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityConfirmationPolicy",
+    "confirmation_policy",
+    [
+      [
+        "termsVersion",
+        "String",
+        true,
+        null
+      ],
+      [
+        "requireNames",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "requirePhone",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "requirePickupConfirmation",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "maximumQuoteAgeSeconds",
+        "int",
+        false,
+        900
+      ],
+      [
+        "maximumAttempts",
+        "int",
+        false,
+        2
+      ],
+      [
+        "version",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]

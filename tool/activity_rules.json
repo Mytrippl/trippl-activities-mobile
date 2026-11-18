@@ -56,5 +56,6 @@
   "ActivityBookingStatus": "if(revision<1||!{'pending','confirmed','rejected','cancelPending','cancelled','unknown'}.contains(state))",
   "ActivityBookingRecord": "if(revision<1||updatedAt.isBefore(createdAt)||!{'pending','confirmed','rejected','cancelPending','cancelled','unknown'}.contains(state))",
   "ActivityBookingEvent": "if(revision<1||!{'submitted','pending','confirmed','rejected','cancelRequested','cancelled','reconciled','unknown'}.contains(kind))",
-  "ActivityReconciliation": "if(remoteRevision<1)"
+  "ActivityReconciliation": "if(remoteRevision<1)",
+  "ActivityConfirmationPolicy": "if(version!=1||maximumQuoteAgeSeconds<1||maximumQuoteAgeSeconds>3600||maximumAttempts<1||maximumAttempts>5)"
 }
