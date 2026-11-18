@@ -133,3 +133,4 @@ export 'activity_core/activity_history.dart';
 export 'activity_core/saved_activity_sync.dart';
 export 'activity_core/activity_account_storage.dart';
 export 'activity_core/activity_portability.dart';
+export 'activity_core/activity_lifecycle_workspace.dart';
