@@ -4840,5 +4840,53 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityActivityExportPolicy",
+    "activity_export_policy",
+    [
+      [
+        "includeNotes",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "includeCoordinates",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "includeBookingReferences",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "includeAttribution",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "maximumItems",
+        "int",
+        false,
+        100
+      ],
+      [
+        "format",
+        "String",
+        false,
+        "json"
+      ],
+      [
+        "version",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]

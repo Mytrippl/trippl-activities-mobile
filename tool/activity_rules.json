@@ -81,5 +81,6 @@
   "ActivitySyncBatch": "if(generation<1||mutations.map((m)=>m.id).toSet().length!=mutations.length||mutations.any((m)=>m.scope!=scope))",
   "ActivitySyncConflict": "if(remoteRevision<1||!{'unresolved','keepLocal','keepRemote','manual'}.contains(resolution)||!RegExp(r'^[a-f0-9]{64}$').hasMatch(localDigest)||!RegExp(r'^[a-f0-9]{64}$').hasMatch(remoteDigest))",
   "ActivitySyncAck": "if(acknowledgedIds.toSet().length!=acknowledgedIds.length||retryIds.toSet().length!=retryIds.length||acknowledgedIds.any(retryIds.contains))",
-  "ActivityDeviceCheckpoint": "if(revision<1||schemaVersion!=1)"
+  "ActivityDeviceCheckpoint": "if(revision<1||schemaVersion!=1)",
+  "ActivityActivityExportPolicy": "if(version!=1||maximumItems<1||maximumItems>100||!includeAttribution||!{'json','csv','calendar'}.contains(format))"
 }
