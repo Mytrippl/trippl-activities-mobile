@@ -3910,5 +3910,65 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityActivityCollection",
+    "activity_collection",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "title",
+        "String",
+        true,
+        null
+      ],
+      [
+        "createdAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "updatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "itemIds",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "archived",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ],
+      [
+        "description",
+        "String",
+        false,
+        null
+      ]
+    ]
   ]
 ]
