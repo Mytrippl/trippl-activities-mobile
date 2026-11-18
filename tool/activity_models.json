@@ -4738,5 +4738,59 @@
         []
       ]
     ]
+  ],
+  [
+    "ActivitySyncAck",
+    "sync_ack",
+    [
+      [
+        "batchId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "receivedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "acknowledgedIds",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "retryIds",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "conflicts",
+        "List<ActivitySyncConflict>",
+        false,
+        []
+      ],
+      [
+        "cursor",
+        "String",
+        false,
+        null
+      ],
+      [
+        "complete",
+        "bool",
+        false,
+        false
+      ]
+    ]
   ]
 ]

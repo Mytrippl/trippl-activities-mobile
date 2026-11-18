@@ -101,3 +101,4 @@ export 'activity_core/models/history_entry.dart';
 export 'activity_core/models/sync_mutation.dart';
 export 'activity_core/models/sync_batch.dart';
 export 'activity_core/models/sync_conflict.dart';
+export 'activity_core/models/sync_ack.dart';
