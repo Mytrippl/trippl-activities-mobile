@@ -13,5 +13,6 @@
   "ActivityEligibility": "if(totalTravelers>100||capacityTravelers>totalTravelers||assignedCategories.length>totalTravelers)",
   "ActivityMoney": "if(!RegExp(r'^[A-Z]{3}$').hasMatch(currency)||decimals>4)",
   "ActivityPriceComponent": "if(quantity<1||quantity>100||!{'base','tax','fee','discount'}.contains(kind))",
-  "ActivityPriceRule": "if(!{'perPerson','perGroup','perUnit'}.contains(basis)||minimumTravelers<1||maximumTravelers>100||minimumTravelers>maximumTravelers||minimumUnits<1||minimumUnits>100||maximumUnits!=null&&(maximumUnits!>100||maximumUnits!<minimumUnits)||priority>1000)"
+  "ActivityPriceRule": "if(!{'perPerson','perGroup','perUnit'}.contains(basis)||minimumTravelers<1||maximumTravelers>100||minimumTravelers>maximumTravelers||minimumUnits<1||minimumUnits>100||maximumUnits!=null&&(maximumUnits!>100||maximumUnits!<minimumUnits)||priority>1000)",
+  "ActivityPriceQuote": "if(revision<1||!expiresAt.isAfter(observedAt)||!RegExp(r'^[a-f0-9]{64}$').hasMatch(requestFingerprint))"
 }
