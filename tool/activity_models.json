@@ -778,5 +778,41 @@
         []
       ]
     ]
+  ],
+  [
+    "ActivityCancellationTier",
+    "cancellation_tier",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "cutoffAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "refundBasisPoints",
+        "int",
+        true,
+        null
+      ],
+      [
+        "fee",
+        "ActivityMoney",
+        false,
+        null
+      ],
+      [
+        "description",
+        "String",
+        false,
+        null
+      ]
+    ]
   ]
 ]
