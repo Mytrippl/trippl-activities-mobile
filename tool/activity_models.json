@@ -2668,5 +2668,53 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityPickupChoice",
+    "pickup_choice",
+    [
+      [
+        "pickupId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "pointId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "meetingPoint",
+        "ActivityMeetingPoint",
+        false,
+        null
+      ],
+      [
+        "instructions",
+        "String",
+        false,
+        null
+      ],
+      [
+        "selectedAt",
+        "instant",
+        false,
+        null
+      ],
+      [
+        "confirmed",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]

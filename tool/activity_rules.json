@@ -47,5 +47,6 @@
   "ActivityAnswer": "if(revision<1||values.toSet().length!=values.length)",
   "ActivityAnswerSet": "if(revision<1||questionRevision<1)",
   "ActivityBookingContact": "if(revision<1||email.length>254||phone!=null&&phone!.length>30)",
-  "ActivityBookingTraveler": "if(revision<1||age>120)"
+  "ActivityBookingTraveler": "if(revision<1||age>120)",
+  "ActivityPickupChoice": "if(revision<1||meetingPoint!=null&&meetingPoint!.id!=pointId)"
 }

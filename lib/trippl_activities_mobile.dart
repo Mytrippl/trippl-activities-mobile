@@ -66,3 +66,4 @@ export 'activity_core/models/answer.dart';
 export 'activity_core/models/answer_set.dart';
 export 'activity_core/models/booking_contact.dart';
 export 'activity_core/models/booking_traveler.dart';
+export 'activity_core/models/pickup_choice.dart';
