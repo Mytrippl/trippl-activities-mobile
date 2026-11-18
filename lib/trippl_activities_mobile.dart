@@ -111,3 +111,4 @@ export 'activity_core/models/activity_dashboard.dart';
 export 'activity_core/booking_guard.dart';
 export 'activity_core/booking_questions.dart';
 export 'activity_core/booking_contacts.dart';
+export 'activity_core/booking_travelers.dart';
