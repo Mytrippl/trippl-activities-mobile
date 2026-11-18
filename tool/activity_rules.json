@@ -43,5 +43,6 @@
   "ActivityDeparture": "if(endsAt!=null&&!endsAt!.isAfter(startsAt))",
   "ActivityQuoteRequest": "if(revision<1||units<1||units>100||!RegExp(r'^[A-Z]{3}$').hasMatch(currency))",
   "ActivityQuestionChoice": "if(revision<1||value.length>200)",
-  "ActivityQuestion": "if(revision<1||maximumLength<1||maximumLength>2000||!{'text','choice','multiChoice','integer','boolean','date'}.contains(kind)||minimumNumber!=null&&maximumNumber!=null&&minimumNumber!>maximumNumber!||choices.map((c)=>c.id).toSet().length!=choices.length)"
+  "ActivityQuestion": "if(revision<1||maximumLength<1||maximumLength>2000||!{'text','choice','multiChoice','integer','boolean','date'}.contains(kind)||minimumNumber!=null&&maximumNumber!=null&&minimumNumber!>maximumNumber!||choices.map((c)=>c.id).toSet().length!=choices.length)",
+  "ActivityAnswer": "if(revision<1||values.toSet().length!=values.length)"
 }

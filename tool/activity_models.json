@@ -2500,5 +2500,41 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityAnswer",
+    "answer",
+    [
+      [
+        "questionId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "values",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "travelerId",
+        "String",
+        false,
+        null
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ],
+      [
+        "updatedAt",
+        "instant",
+        true,
+        null
+      ]
+    ]
   ]
 ]
