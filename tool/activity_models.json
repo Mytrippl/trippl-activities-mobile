@@ -226,5 +226,41 @@
         []
       ]
     ]
+  ],
+  [
+    "ActivityRating",
+    "rating",
+    [
+      [
+        "value",
+        "double",
+        false,
+        null
+      ],
+      [
+        "count",
+        "int",
+        false,
+        null
+      ],
+      [
+        "maximum",
+        "int",
+        false,
+        5
+      ],
+      [
+        "observedAt",
+        "instant",
+        false,
+        null
+      ],
+      [
+        "source",
+        "String",
+        false,
+        null
+      ]
+    ]
   ]
 ]

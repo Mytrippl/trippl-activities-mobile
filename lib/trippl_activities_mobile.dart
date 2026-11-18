@@ -5,3 +5,4 @@ export 'activity_core/models/address.dart';
 export 'activity_core/models/attribution.dart';
 export 'activity_core/models/photo.dart';
 export 'activity_core/models/review.dart';
+export 'activity_core/models/rating.dart';
