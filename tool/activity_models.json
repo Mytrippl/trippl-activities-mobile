@@ -4246,5 +4246,65 @@
         true
       ]
     ]
+  ],
+  [
+    "ActivityActivityReminder",
+    "activity_reminder",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "resourceId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "dueAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "createdAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "leadMinutes",
+        "int",
+        false,
+        30
+      ],
+      [
+        "enabled",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "delivered",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]
