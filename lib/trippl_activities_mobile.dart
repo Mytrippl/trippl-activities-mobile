@@ -114,3 +114,4 @@ export 'activity_core/booking_contacts.dart';
 export 'activity_core/booking_travelers.dart';
 export 'activity_core/booking_pickup.dart';
 export 'activity_core/booking_terms.dart';
+export 'activity_core/booking_quote_review.dart';
