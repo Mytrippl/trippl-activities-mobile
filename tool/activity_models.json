@@ -814,5 +814,53 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityCancellationPolicy",
+    "cancellation_policy",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "kind",
+        "String",
+        false,
+        "unknown"
+      ],
+      [
+        "tiers",
+        "List<ActivityCancellationTier>",
+        false,
+        []
+      ],
+      [
+        "observedAt",
+        "instant",
+        false,
+        null
+      ],
+      [
+        "expiresAt",
+        "instant",
+        false,
+        null
+      ],
+      [
+        "description",
+        "String",
+        false,
+        null
+      ],
+      [
+        "requiresReview",
+        "bool",
+        false,
+        true
+      ]
+    ]
   ]
 ]

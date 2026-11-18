@@ -16,5 +16,6 @@
   "ActivityPriceRule": "if(!{'perPerson','perGroup','perUnit'}.contains(basis)||minimumTravelers<1||maximumTravelers>100||minimumTravelers>maximumTravelers||minimumUnits<1||minimumUnits>100||maximumUnits!=null&&(maximumUnits!>100||maximumUnits!<minimumUnits)||priority>1000)",
   "ActivityPriceQuote": "if(revision<1||!expiresAt.isAfter(observedAt)||!RegExp(r'^[a-f0-9]{64}$').hasMatch(requestFingerprint))",
   "ActivityPriceBreakdown": "if(travelerCount<1||travelerCount>100||!{'perPerson','perGroup','perUnit','unknown'}.contains(basis))",
-  "ActivityCancellationTier": "if(refundBasisPoints>10000)"
+  "ActivityCancellationTier": "if(refundBasisPoints>10000)",
+  "ActivityCancellationPolicy": "if(!{'unknown','standard','custom','nonRefundable'}.contains(kind)||observedAt!=null&&expiresAt!=null&&!expiresAt!.isAfter(observedAt!)||tiers.map((t)=>t.id).toSet().length!=tiers.length)"
 }
