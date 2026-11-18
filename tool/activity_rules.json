@@ -48,5 +48,6 @@
   "ActivityAnswerSet": "if(revision<1||questionRevision<1)",
   "ActivityBookingContact": "if(revision<1||email.length>254||phone!=null&&phone!.length>30)",
   "ActivityBookingTraveler": "if(revision<1||age>120)",
-  "ActivityPickupChoice": "if(revision<1||meetingPoint!=null&&meetingPoint!.id!=pointId)"
+  "ActivityPickupChoice": "if(revision<1||meetingPoint!=null&&meetingPoint!.id!=pointId)",
+  "ActivityTermsAcceptance": "if(revision<1||!RegExp(r'^[a-f0-9]{64}$').hasMatch(quoteDigest))"
 }
