@@ -46,3 +46,4 @@ export 'activity_core/models/departure.dart';
 export 'activity_core/models/quote_request.dart';
 export 'activity_core/activity_guard.dart';
 export 'activity_core/traveler_eligibility.dart';
+export 'activity_core/activity_money.dart';
