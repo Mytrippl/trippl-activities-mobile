@@ -66,5 +66,6 @@
   "ActivitySupportCase": "if(revision<1||updatedAt.isBefore(createdAt)||summary.length>1000||!{'booking','pickup','voucher','cancellation','refund','other'}.contains(category)||!{'draft','submitted','open','resolved'}.contains(state))",
   "ActivitySavedActivity": "if(revision<1||priority>5||updatedAt.isBefore(savedAt)||note!=null&&note!.length>2000)",
   "ActivityActivityCollection": "if(revision<1||updatedAt.isBefore(createdAt)||itemIds.toSet().length!=itemIds.length)",
-  "ActivityCollectionItem": "if(revision<1||position>100)"
+  "ActivityCollectionItem": "if(revision<1||position>100)",
+  "ActivityActivityItinerary": "if(revision<1||updatedAt.isBefore(createdAt)||endDate.isBefore(startDate)||endDate.difference(startDate).inDays>90||dayIds.toSet().length!=dayIds.length||!{'draft','ready','archived'}.contains(state))"
 }

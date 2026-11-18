@@ -88,3 +88,4 @@ export 'activity_core/models/support_case.dart';
 export 'activity_core/models/saved_activity.dart';
 export 'activity_core/models/activity_collection.dart';
 export 'activity_core/models/collection_item.dart';
+export 'activity_core/models/activity_itinerary.dart';
