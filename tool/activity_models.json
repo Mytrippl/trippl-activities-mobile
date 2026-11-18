@@ -1366,5 +1366,65 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityAvailability",
+    "availability",
+    [
+      [
+        "productId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "optionId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "evaluatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "slots",
+        "List<ActivitySlot>",
+        false,
+        []
+      ],
+      [
+        "bookable",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "state",
+        "String",
+        false,
+        "unknown"
+      ],
+      [
+        "travelerCount",
+        "int",
+        true,
+        null
+      ],
+      [
+        "warningCodes",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "earliestAt",
+        "instant",
+        false,
+        null
+      ]
+    ]
   ]
 ]

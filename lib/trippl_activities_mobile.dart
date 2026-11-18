@@ -27,3 +27,4 @@ export 'activity_core/models/inclusion.dart';
 export 'activity_core/models/option.dart';
 export 'activity_core/models/product.dart';
 export 'activity_core/models/slot.dart';
+export 'activity_core/models/availability.dart';
