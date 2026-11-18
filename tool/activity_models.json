@@ -166,5 +166,65 @@
         []
       ]
     ]
+  ],
+  [
+    "ActivityReview",
+    "review",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "authorName",
+        "String",
+        true,
+        null
+      ],
+      [
+        "rating",
+        "double",
+        false,
+        null
+      ],
+      [
+        "text",
+        "String",
+        false,
+        null
+      ],
+      [
+        "language",
+        "String",
+        false,
+        null
+      ],
+      [
+        "publishedAt",
+        "instant",
+        false,
+        null
+      ],
+      [
+        "observedAt",
+        "instant",
+        false,
+        null
+      ],
+      [
+        "verified",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "attributions",
+        "List<ActivityAttribution>",
+        false,
+        []
+      ]
+    ]
   ]
 ]
