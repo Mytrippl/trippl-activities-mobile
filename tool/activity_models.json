@@ -1990,5 +1990,53 @@
         []
       ]
     ]
+  ],
+  [
+    "ActivityComparison",
+    "comparison",
+    [
+      [
+        "evaluatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "productIds",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "cards",
+        "List<ActivityResultCard>",
+        false,
+        []
+      ],
+      [
+        "comparablePrices",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "currency",
+        "String",
+        false,
+        null
+      ],
+      [
+        "warningCodes",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]
