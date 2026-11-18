@@ -57,3 +57,4 @@ export 'activity_core/activity_requests.dart';
 export 'activity_core/activity_controller.dart';
 export 'activity_core/activity_cache.dart';
 export 'activity_core/activity_pagination.dart';
+export 'activity_core/activity_presentation.dart';

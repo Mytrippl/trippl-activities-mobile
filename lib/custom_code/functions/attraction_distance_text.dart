@@ -19,7 +19,7 @@ String? attractionDistanceText(
   double? distanceMeters,
   String languageCode,
 ) {
-  if (distanceMeters == null) {
+  if (distanceMeters == null || !distanceMeters.isFinite || distanceMeters < 0) {
     return languageCode == 'tr' ? 'Konum bilgisi yok' : 'Location unavailable';
   }
 

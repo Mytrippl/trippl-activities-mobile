@@ -30,7 +30,7 @@ double tripplActivitesRatingDouble(dynamic rating) {
     parsed = double.tryParse(rating);
   }
 
-  if (parsed == null) {
+  if (parsed == null || !parsed.isFinite || parsed < 0 || parsed > 5) {
     return 0.0;
   }
 

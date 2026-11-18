@@ -85,8 +85,8 @@ String tripplActivitesPriceLabel(
   }
 
   if (isTurkish) {
-    return '$formattedPrice$symbol / kişi';
+    return 'Başlangıç: $formattedPrice$symbol';
   }
 
-  return 'From $symbol$formattedPrice / person';
+  return 'From $symbol$formattedPrice';
 }
