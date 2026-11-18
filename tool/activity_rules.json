@@ -30,5 +30,6 @@
   "ActivitySearchQuery": "if(limit<1||limit>100||offset>10000||startDate!=null&&endDate!=null&&endDate!.isBefore(startDate!)||!RegExp(r'^[A-Z]{3}$').hasMatch(currency)||language.length>20)",
   "ActivitySearchFilter": "if(minimumPriceMinor!=null&&maximumPriceMinor!=null&&minimumPriceMinor!>maximumPriceMinor!||(minimumPriceMinor!=null||maximumPriceMinor!=null)&&currency==null||minimumRating!=null&&(minimumRating!<0||minimumRating!>5)||minimumDurationMinutes!=null&&maximumDurationMinutes!=null&&minimumDurationMinutes!>maximumDurationMinutes!||radiusMeters!=null&&(radiusMeters!<1||radiusMeters!>50000||center==null))",
   "ActivitySearchSort": "if(!{'recommended','price','rating','reviewCount','duration','distance','title'}.contains(field)||tieBreak!='id')",
-  "ActivityProviderRequest": "if(!{'search','details','availability','quote'}.contains(mode)||limit<1||limit>100||scope.length>120||mode=='search'&&query==null||mode=='details'&&productId==null||(mode=='availability'||mode=='quote')&&availability==null)"
+  "ActivityProviderRequest": "if(!{'search','details','availability','quote'}.contains(mode)||limit<1||limit>100||scope.length>120||mode=='search'&&query==null||mode=='details'&&productId==null||(mode=='availability'||mode=='quote')&&availability==null)",
+  "ActivityProviderPage": "if(!expiresAt.isAfter(observedAt)||complete&&cursor!=null||!RegExp(r'^[a-f0-9]{64}$').hasMatch(requestFingerprint)||products.map((p)=>p.id).toSet().length!=products.length||slots.map((s)=>s.id).toSet().length!=slots.length)"
 }
