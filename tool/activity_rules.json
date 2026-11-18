@@ -23,5 +23,6 @@
   "ActivityPickup": "if(pointIds.toSet().length!=pointIds.length||included&&!available)",
   "ActivityInclusion": "if(!{'admission','transport','guide','food','equipment','other'}.contains(category))",
   "ActivityOption": "if(minimumTravelers<1||maximumTravelers>100||minimumTravelers>maximumTravelers||priceRules.map((p)=>p.id).toSet().length!=priceRules.length)",
-  "ActivityProduct": "if(revision<1||observedAt!=null&&expiresAt!=null&&!expiresAt!.isAfter(observedAt!)||options.any((o)=>o.productId!=id)||options.map((o)=>o.id).toSet().length!=options.length)"
+  "ActivityProduct": "if(revision<1||observedAt!=null&&expiresAt!=null&&!expiresAt!.isAfter(observedAt!)||options.any((o)=>o.productId!=id)||options.map((o)=>o.id).toSet().length!=options.length)",
+  "ActivitySlot": "if(revision<1||!expiresAt.isAfter(observedAt)||endsAt!=null&&!endsAt!.isAfter(startsAt)||remainingCapacity!=null&&remainingCapacity!>100000||!{'unknown','available','soldOut','unavailable'}.contains(state))"
 }
