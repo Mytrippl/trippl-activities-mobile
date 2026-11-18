@@ -22,5 +22,6 @@
   "ActivityMeetingPoint": "if(arrivalMinutesBefore>1440)",
   "ActivityPickup": "if(pointIds.toSet().length!=pointIds.length||included&&!available)",
   "ActivityInclusion": "if(!{'admission','transport','guide','food','equipment','other'}.contains(category))",
-  "ActivityOption": "if(minimumTravelers<1||maximumTravelers>100||minimumTravelers>maximumTravelers||priceRules.map((p)=>p.id).toSet().length!=priceRules.length)"
+  "ActivityOption": "if(minimumTravelers<1||maximumTravelers>100||minimumTravelers>maximumTravelers||priceRules.map((p)=>p.id).toSet().length!=priceRules.length)",
+  "ActivityProduct": "if(revision<1||observedAt!=null&&expiresAt!=null&&!expiresAt!.isAfter(observedAt!)||options.any((o)=>o.productId!=id)||options.map((o)=>o.id).toSet().length!=options.length)"
 }
