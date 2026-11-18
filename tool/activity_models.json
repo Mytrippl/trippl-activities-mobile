@@ -400,5 +400,41 @@
         false
       ]
     ]
+  ],
+  [
+    "ActivityTraveler",
+    "traveler",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "age",
+        "int",
+        true,
+        null
+      ],
+      [
+        "category",
+        "String",
+        false,
+        null
+      ],
+      [
+        "requiresAssistance",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "ageAtDate",
+        "day",
+        false,
+        null
+      ]
+    ]
   ]
 ]

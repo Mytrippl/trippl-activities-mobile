@@ -9,3 +9,4 @@ export 'activity_core/models/rating.dart';
 export 'activity_core/models/duration.dart';
 export 'activity_core/models/guide_language.dart';
 export 'activity_core/models/age_band.dart';
+export 'activity_core/models/traveler.dart';
