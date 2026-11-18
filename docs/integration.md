@@ -38,4 +38,36 @@ The legacy price-label helper has no pricing-basis input, so it now presents a n
 
 ## Remaining host checks
 
-Build the complete FlutterFlow application using its actual dependencies. Exercise empty results, rapid searches, account changes, screen disposal, translations, media attribution and device layouts. Verify real provider payload mapping and retention terms before enabling network reads. Add reservation, payment, voucher and post-booking flows separately through authorized backend APIs.
+Build the complete FlutterFlow application using its actual dependencies. Exercise empty results, rapid searches, account changes, screen disposal, translations, media attribution and device layouts. Verify real provider payload mapping and retention terms before enabling network reads. Connect the booking, voucher and post-booking ports to authorized backend APIs; payment processing remains a host responsibility.
+
+## Booking transport and recovery
+
+Implement `ActivityBookingTransport` using the existing authenticated backend. Authorize scope, persist the intent and enforce its idempotency key before a supplier write. Bind responses to the intent ID, draft fingerprint, booking identity and accepted total. The mobile controller does not automatically repeat uncertain writes.
+
+A timeout, connection failure or invalid receipt becomes an uncertain outcome. Use `lookupIntent` to reconcile it. Do not generate a new intent ID to retry an uncertain booking. Pending and confirmed receipts need monotonic supplier/backend revisions. Status observations use the separate booking-status reconciliation rules.
+
+Persist the reviewed draft and intent before dispatch using an appropriate recovery strategy. The provided protected recovery store can retain contact and answer data only when the relevant consent is effective. The host must supply actual protected storage and a backend account-recovery path; checksums alone are not encryption or authorization. Restoring local state does not prove that a booking or payment succeeded.
+
+## Customer review
+
+Supplier question revisions are part of answer validation. Required traveler-scoped questions need one answer for every applicable traveler. The application should surface review reason codes before submission. Local question validation does not replace supplier-side checks.
+
+Terms acceptance records the current quote digest and terms version. Repricing invalidates acceptance. Required names and phone details are controlled by the confirmation policy. Pickup selection must match the supplier pickup configuration, point identity, option and deadline.
+
+Quote, inventory and cancellation-policy observations expire independently. Revalidate relevant data at review time. A successful draft review only permits a backend submission; confirmation requires a matching backend receipt.
+
+## Cancellation and voucher boundaries
+
+Implement cancellation through `ActivityCancellationTransport`; use lookup after uncertainty. A cancellation request is not a cancelled booking. Reported refunds must use the booking currency and cannot exceed the paid amount. Provider refund progress is distinct from bank settlement.
+
+Voucher display requires eligible booking state, supplier documents and valid access conditions. Do not synthesize a ticket from product details. Clear revoked vouchers and cancel reminders when backend booking status changes.
+
+## Saved content and ownership
+
+Use the saved-content sync port only for saved activities, collections, itineraries and preferences. It deliberately rejects booking and cancellation resources. Persist queued saved-content state before sending and resolve conflicting payloads explicitly; recording a conflict choice does not secretly rewrite a booking.
+
+Account deletion must target every store owned by the host, including separately held itinerary IDs, protected draft IDs, discovery caches and platform reminders. The lifecycle erasure helper reports failed requested deletions and does not claim remote deletion. Resolve active uncertain operations before removing the recovery information needed by the host.
+
+## Application release checks
+
+Build and test the complete FlutterFlow host app before release. Exercise account changes, expired quotes, required answers, rapid duplicate taps, interrupted submissions, backend lookup, voucher revocation, cancellation uncertainty and notification permission changes. Test actual protected storage and provider payload mappings on the intended devices. The repository's fake transports verify local behavior without performing real bookings or cancellations.

@@ -74,3 +74,43 @@ See [integration notes](docs/integration.md) and [verification](docs/verificatio
 ## Source Package
 
 Run `python3 tool/package_source.py` after committing changes. The tool writes a deterministic source archive, checksum and file manifest to `dist/` and verifies the archive contents. This is a source package, not an application binary.
+
+## Booking Drafts and Review
+
+`ActivityBookingDrafts` keeps contact details, traveler information, required supplier questions, pickup choices and accepted terms in one revision-checked draft. Question answers support text, choices, multiple choices, integers, booleans and dates. Sensitive answers are redacted from general form projections.
+
+Quotes remain bound to the selected party, date, language, units, option and slot. Replacing a quote clears earlier acceptance. `ActivityBookingIntents` prepares an idempotent submission intent only after current inventory, quote, contact, question, pickup and terms checks pass and the user confirms submission.
+
+`ActivityBookingController` performs one write through a host-provided `ActivityBookingTransport`. A timeout remains uncertain and requires read-only intent lookup; it does not trigger another booking write. A matching backend receipt is required before a confirmed booking record is created. Status reconciliation rejects stale observations and terminal-state regressions.
+
+The host must persist recovery information before sending a booking intent and enforce authorization and idempotency on the backend. No supplier transport or payment processor is configured in this repository.
+
+## Vouchers, Cancellations and Refunds
+
+Voucher access checks the booking, account, validity period, document expiry and revocation. Repeated reads of the same voucher are idempotent. Offline voucher display still needs provider verification where required by the supplier.
+
+`ActivityCancellations` separates a user-confirmed request from the supplier's result. Uncertain outcomes are reconciled by request identity. Cancellation estimates do not execute cancellations. Refund records distinguish pending and provider-processed amounts and do not claim that bank settlement has completed.
+
+`ActivitySupportDrafts` prepares reviewed support payloads for the host. Preparing a payload does not send a message.
+
+## Saved Activities and Itineraries
+
+`ActivitySavedLibrary` manages saved snapshots, notes and ordered private collections. Checkpoints validate account ownership, item references and ordering before replacing local state.
+
+`ActivityItineraries` supports calendar days, explicit local offsets, activity stops, arrival buffers and transfer time. Conflict checks cover overlaps and day bounds. Confirmed booking times cannot be changed as a local planning edit. Agenda presentation and calendar exports preserve the distinction between confirmed and tentative stops.
+
+Saved exports omit notes, coordinates and booking references by default and retain attribution. CSV text is protected from spreadsheet formula interpretation. Imports produce a preview and require confirmation before adding local saved records; they never create bookings.
+
+## Account Storage and Privacy
+
+History, detailed draft retention and analytics default to off. Purpose-specific consent has a policy version and optional expiry. General audit events exclude raw contact details and supplier answers.
+
+`ActivityAccountStore` persists saved libraries, preferences, itinerary graphs and saved-content sync state through host-provided device storage. `ActivityBookingRecoveryStore` requires a separate `ActivityProtectedStorage` implementation and effective consent for booking contact, traveler and answer data. It has no plaintext fallback. The host is responsible for the protection provided by that implementation and for clearing all account stores on sign-out or deletion.
+
+`ActivitySavedSync` handles idempotent saved-content updates, retries and conflict review. Booking and cancellation resources cannot enter its outbox.
+
+## Lifecycle Integration
+
+`ActivityLifecycleWorkspace` combines discovery, saved content, booking review, status reconciliation, privacy and notifications. Its screen projection masks contact details. The local command bridge supports reversible saved-state actions; financial operations remain explicit typed workflows with reviewed intents.
+
+Reminder intents remain opt-in. The host requests platform notification permission, schedules supported reminders and acknowledges delivery. Closing the lifecycle workspace releases its subscriptions; supplied discovery, booking and storage dependencies retain their own host ownership.
