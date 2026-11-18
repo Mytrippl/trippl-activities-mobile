@@ -59,3 +59,4 @@ export 'activity_core/activity_cache.dart';
 export 'activity_core/activity_pagination.dart';
 export 'activity_core/activity_presentation.dart';
 export 'activity_core/activity_comparison.dart';
+export 'activity_core/activity_workspace.dart';
