@@ -125,3 +125,4 @@ export 'activity_core/booking_cancellations.dart';
 export 'activity_core/booking_refunds.dart';
 export 'activity_core/booking_support.dart';
 export 'activity_core/saved_activity_library.dart';
+export 'activity_core/activity_itineraries.dart';
