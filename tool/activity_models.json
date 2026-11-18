@@ -526,5 +526,29 @@
         false
       ]
     ]
+  ],
+  [
+    "ActivityMoney",
+    "money",
+    [
+      [
+        "currency",
+        "String",
+        true,
+        null
+      ],
+      [
+        "amountMinor",
+        "int",
+        true,
+        null
+      ],
+      [
+        "decimals",
+        "int",
+        false,
+        2
+      ]
+    ]
   ]
 ]

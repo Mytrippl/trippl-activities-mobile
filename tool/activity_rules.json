@@ -10,5 +10,6 @@
   "ActivityAgeBand": "if(!{'adult','senior','youth','child','infant','traveler'}.contains(category)||startAge>120||endAge>120||endAge<startAge||minimumTravelers>100||maximumTravelers!=null&&(maximumTravelers!>100||maximumTravelers!<minimumTravelers))",
   "ActivityTraveler": "if(age>120)",
   "ActivityTravelerMix": "if(revision<1||minimumTravelers<1||maximumTravelers>100||minimumTravelers>maximumTravelers||travelers.map((t)=>t.id).toSet().length!=travelers.length||!{'perPerson','perGroup','perUnit','unknown'}.contains(pricingBasis))",
-  "ActivityEligibility": "if(totalTravelers>100||capacityTravelers>totalTravelers||assignedCategories.length>totalTravelers)"
+  "ActivityEligibility": "if(totalTravelers>100||capacityTravelers>totalTravelers||assignedCategories.length>totalTravelers)",
+  "ActivityMoney": "if(!RegExp(r'^[A-Z]{3}$').hasMatch(currency)||decimals>4)"
 }
