@@ -72,3 +72,4 @@ export 'activity_core/models/booking_draft.dart';
 export 'activity_core/models/booking_intent.dart';
 export 'activity_core/models/booking_receipt.dart';
 export 'activity_core/models/booking_status.dart';
+export 'activity_core/models/booking_record.dart';
