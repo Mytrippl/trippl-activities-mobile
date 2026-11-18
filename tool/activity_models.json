@@ -2386,5 +2386,47 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityQuestionChoice",
+    "question_choice",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "label",
+        "String",
+        true,
+        null
+      ],
+      [
+        "value",
+        "String",
+        true,
+        null
+      ],
+      [
+        "active",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "description",
+        "String",
+        false,
+        null
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]
