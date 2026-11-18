@@ -4,5 +4,6 @@
   "ActivityAttribution": "if(!{'provider','photo','review','author','license'}.contains(kind) || uri!=null&&(Uri.tryParse(uri!)?.scheme!='https'||Uri.tryParse(uri!)!.host.isEmpty||Uri.tryParse(uri!)!.userInfo.isNotEmpty))",
   "ActivityPhoto": "if(Uri.tryParse(url)?.scheme!='https'||Uri.tryParse(url)!.host.isEmpty||Uri.tryParse(url)!.userInfo.isNotEmpty||width!=null&&(width!<1||width!>20000)||height!=null&&(height!<1||height!>20000)||observedAt!=null&&expiresAt!=null&&!expiresAt!.isAfter(observedAt!))",
   "ActivityReview": "if(rating!=null&&(rating!<0||rating!>5))",
-  "ActivityRating": "if(maximum!=5||value!=null&&(value!<0||value!>5))"
+  "ActivityRating": "if(maximum!=5||value!=null&&(value!<0||value!>5))",
+  "ActivityDuration": "if(minimumMinutes!=null&&minimumMinutes!>43200||maximumMinutes!=null&&maximumMinutes!>43200||fixedMinutes!=null&&(fixedMinutes!<1||fixedMinutes!>43200)||minimumMinutes!=null&&maximumMinutes!=null&&minimumMinutes!>maximumMinutes!)"
 }

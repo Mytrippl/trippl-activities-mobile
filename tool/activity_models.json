@@ -262,5 +262,47 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityDuration",
+    "duration",
+    [
+      [
+        "minimumMinutes",
+        "int",
+        false,
+        null
+      ],
+      [
+        "maximumMinutes",
+        "int",
+        false,
+        null
+      ],
+      [
+        "fixedMinutes",
+        "int",
+        false,
+        null
+      ],
+      [
+        "approximate",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "flexible",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "description",
+        "String",
+        false,
+        null
+      ]
+    ]
   ]
 ]

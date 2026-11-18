@@ -6,3 +6,4 @@ export 'activity_core/models/attribution.dart';
 export 'activity_core/models/photo.dart';
 export 'activity_core/models/review.dart';
 export 'activity_core/models/rating.dart';
+export 'activity_core/models/duration.dart';
