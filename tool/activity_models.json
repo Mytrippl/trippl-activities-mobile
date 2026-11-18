@@ -4420,5 +4420,53 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityActivityPrivacy",
+    "activity_privacy",
+    [
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "updatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "retainHistory",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "persistDraftDetails",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "allowAnalytics",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "retentionDays",
+        "int",
+        false,
+        30
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]
