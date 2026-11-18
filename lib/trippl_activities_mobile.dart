@@ -63,3 +63,4 @@ export 'activity_core/activity_workspace.dart';
 export 'activity_core/models/question_choice.dart';
 export 'activity_core/models/question.dart';
 export 'activity_core/models/answer.dart';
+export 'activity_core/models/answer_set.dart';

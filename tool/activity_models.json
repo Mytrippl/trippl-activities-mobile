@@ -2536,5 +2536,41 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityAnswerSet",
+    "answer_set",
+    [
+      [
+        "draftId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "updatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "answers",
+        "List<ActivityAnswer>",
+        false,
+        []
+      ],
+      [
+        "questionRevision",
+        "int",
+        false,
+        1
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]
