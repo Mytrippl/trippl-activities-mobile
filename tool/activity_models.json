@@ -4468,5 +4468,59 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityActivityConsent",
+    "activity_consent",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "purpose",
+        "String",
+        true,
+        null
+      ],
+      [
+        "policyVersion",
+        "String",
+        true,
+        null
+      ],
+      [
+        "recordedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "granted",
+        "bool",
+        true,
+        null
+      ],
+      [
+        "expiresAt",
+        "instant",
+        false,
+        null
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]

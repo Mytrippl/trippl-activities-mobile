@@ -74,5 +74,6 @@
   "ActivityActivityReminder": "if(revision<1||leadMinutes>10080||dueAt.isBefore(createdAt))",
   "ActivityActivityNotification": "if(revision<1||!expiresAt.isAfter(createdAt)||!{'booking','voucher','cancellation','refund','reminder','conflict'}.contains(kind))",
   "ActivityActivityPreference": "if(revision<1||!RegExp(r'^[A-Z]{3}$').hasMatch(currency)||!{'recommended','price','rating','duration','distance','title','reviewCount'}.contains(sortField))",
-  "ActivityActivityPrivacy": "if(revision<1||retentionDays<1||retentionDays>365)"
+  "ActivityActivityPrivacy": "if(revision<1||retentionDays<1||retentionDays>365)",
+  "ActivityActivityConsent": "if(revision<1||!{'history','draftDetails','analytics','reminders'}.contains(purpose)||expiresAt!=null&&!expiresAt!.isAfter(recordedAt))"
 }
