@@ -4198,5 +4198,53 @@
         false
       ]
     ]
+  ],
+  [
+    "ActivityItineraryConflict",
+    "itinerary_conflict",
+    [
+      [
+        "code",
+        "String",
+        true,
+        null
+      ],
+      [
+        "dayId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "stopId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "message",
+        "String",
+        true,
+        null
+      ],
+      [
+        "relatedStopId",
+        "String",
+        false,
+        null
+      ],
+      [
+        "severity",
+        "String",
+        false,
+        "warning"
+      ],
+      [
+        "requiresReview",
+        "bool",
+        false,
+        true
+      ]
+    ]
   ]
 ]

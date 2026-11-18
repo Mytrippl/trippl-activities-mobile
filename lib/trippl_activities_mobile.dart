@@ -91,3 +91,4 @@ export 'activity_core/models/collection_item.dart';
 export 'activity_core/models/activity_itinerary.dart';
 export 'activity_core/models/itinerary_day.dart';
 export 'activity_core/models/itinerary_stop.dart';
+export 'activity_core/models/itinerary_conflict.dart';
