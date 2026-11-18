@@ -3514,5 +3514,53 @@
         false
       ]
     ]
+  ],
+  [
+    "ActivityVoucherAccess",
+    "voucher_access",
+    [
+      [
+        "voucherId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "bookingId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "evaluatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "allowed",
+        "bool",
+        true,
+        null
+      ],
+      [
+        "reasonCodes",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "offline",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "requiresProviderVerification",
+        "bool",
+        false,
+        true
+      ]
+    ]
   ]
 ]
