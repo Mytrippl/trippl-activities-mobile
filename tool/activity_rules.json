@@ -84,5 +84,6 @@
   "ActivityDeviceCheckpoint": "if(revision<1||schemaVersion!=1)",
   "ActivityActivityExportPolicy": "if(version!=1||maximumItems<1||maximumItems>100||!includeAttribution||!{'json','csv','calendar'}.contains(format))",
   "ActivityExportBundle": "if(schemaVersion!=1||itemCount>100||!{'json','csv','calendar'}.contains(format)||!RegExp(r'^[a-f0-9]{64}$').hasMatch(digest))",
-  "ActivityImportPreview": "if(rejectedCount>100||products.map((p)=>p.id).toSet().length!=products.length||!RegExp(r'^[a-f0-9]{64}$').hasMatch(sourceDigest))"
+  "ActivityImportPreview": "if(rejectedCount>100||products.map((p)=>p.id).toSet().length!=products.length||!RegExp(r'^[a-f0-9]{64}$').hasMatch(sourceDigest))",
+  "ActivityAuditEvent": "if(revision<1||!{'draft','submitted','reconciled','saved','removed','exported','erased','failure'}.contains(kind))"
 }

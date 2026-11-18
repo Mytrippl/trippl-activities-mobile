@@ -5002,5 +5002,53 @@
         true
       ]
     ]
+  ],
+  [
+    "ActivityAuditEvent",
+    "audit_event",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "resourceId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "kind",
+        "String",
+        true,
+        null
+      ],
+      [
+        "occurredAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "reasonCodes",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]
