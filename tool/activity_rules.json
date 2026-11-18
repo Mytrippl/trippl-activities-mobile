@@ -8,5 +8,6 @@
   "ActivityDuration": "if(minimumMinutes!=null&&minimumMinutes!>43200||maximumMinutes!=null&&maximumMinutes!>43200||fixedMinutes!=null&&(fixedMinutes!<1||fixedMinutes!>43200)||minimumMinutes!=null&&maximumMinutes!=null&&minimumMinutes!>maximumMinutes!)",
   "ActivityGuideLanguage": "if(!RegExp(r'^[a-z]{2,3}(?:-[A-Za-z]{2,4})?$').hasMatch(code)||!{'guide','audio','written'}.contains(kind))",
   "ActivityAgeBand": "if(!{'adult','senior','youth','child','infant','traveler'}.contains(category)||startAge>120||endAge>120||endAge<startAge||minimumTravelers>100||maximumTravelers!=null&&(maximumTravelers!>100||maximumTravelers!<minimumTravelers))",
-  "ActivityTraveler": "if(age>120)"
+  "ActivityTraveler": "if(age>120)",
+  "ActivityTravelerMix": "if(revision<1||minimumTravelers<1||maximumTravelers>100||minimumTravelers>maximumTravelers||travelers.map((t)=>t.id).toSet().length!=travelers.length||!{'perPerson','perGroup','perUnit','unknown'}.contains(pricingBasis))"
 }

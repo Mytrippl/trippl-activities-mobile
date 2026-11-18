@@ -436,5 +436,41 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityTravelerMix",
+    "traveler_mix",
+    [
+      [
+        "travelers",
+        "List<ActivityTraveler>",
+        false,
+        []
+      ],
+      [
+        "minimumTravelers",
+        "int",
+        false,
+        1
+      ],
+      [
+        "maximumTravelers",
+        "int",
+        false,
+        100
+      ],
+      [
+        "pricingBasis",
+        "String",
+        false,
+        "perPerson"
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]
