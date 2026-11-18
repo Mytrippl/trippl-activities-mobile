@@ -2320,5 +2320,65 @@
         []
       ]
     ]
+  ],
+  [
+    "ActivityQuoteRequest",
+    "quote_request",
+    [
+      [
+        "productId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "optionId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "slotId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "travelers",
+        "ActivityTravelerMix",
+        true,
+        null
+      ],
+      [
+        "currency",
+        "String",
+        true,
+        null
+      ],
+      [
+        "createdAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "languageCode",
+        "String",
+        false,
+        null
+      ],
+      [
+        "units",
+        "int",
+        false,
+        1
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]

@@ -43,3 +43,4 @@ export 'activity_core/models/cache_entry.dart';
 export 'activity_core/models/field_mask.dart';
 export 'activity_core/models/search_result.dart';
 export 'activity_core/models/departure.dart';
+export 'activity_core/models/quote_request.dart';
