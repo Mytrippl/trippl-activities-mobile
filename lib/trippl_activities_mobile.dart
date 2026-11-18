@@ -69,3 +69,4 @@ export 'activity_core/models/booking_traveler.dart';
 export 'activity_core/models/pickup_choice.dart';
 export 'activity_core/models/terms_acceptance.dart';
 export 'activity_core/models/booking_draft.dart';
+export 'activity_core/models/booking_intent.dart';

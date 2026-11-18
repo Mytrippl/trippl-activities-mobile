@@ -50,5 +50,6 @@
   "ActivityBookingTraveler": "if(revision<1||age>120)",
   "ActivityPickupChoice": "if(revision<1||meetingPoint!=null&&meetingPoint!.id!=pointId)",
   "ActivityTermsAcceptance": "if(revision<1||!RegExp(r'^[a-f0-9]{64}$').hasMatch(quoteDigest))",
-  "ActivityBookingDraft": "if(revision<1||units<1||units>100||updatedAt.isBefore(createdAt)||slot.productId!=product.id||slot.optionId!=optionId||!{'editing','review','submitting','pending','confirmed','rejected','unknown','abandoned'}.contains(state))"
+  "ActivityBookingDraft": "if(revision<1||units<1||units>100||updatedAt.isBefore(createdAt)||slot.productId!=product.id||slot.optionId!=optionId||!{'editing','review','submitting','pending','confirmed','rejected','unknown','abandoned'}.contains(state))",
+  "ActivityBookingIntent": "if(revision<1||attempts>5||!expiresAt.isAfter(createdAt)||!RegExp(r'^[a-f0-9]{64}$').hasMatch(draftFingerprint)||!RegExp(r'^[a-f0-9]{64}$').hasMatch(idempotencyKey)||!{'prepared','sending','pending','confirmed','rejected','unknown'}.contains(state))"
 }
