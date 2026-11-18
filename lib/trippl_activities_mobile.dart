@@ -24,3 +24,4 @@ export 'activity_core/models/meeting_point.dart';
 export 'activity_core/models/pickup.dart';
 export 'activity_core/models/accessibility.dart';
 export 'activity_core/models/inclusion.dart';
+export 'activity_core/models/option.dart';
