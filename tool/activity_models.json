@@ -4792,5 +4792,53 @@
         false
       ]
     ]
+  ],
+  [
+    "ActivityDeviceCheckpoint",
+    "device_checkpoint",
+    [
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "savedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "revision",
+        "int",
+        true,
+        null
+      ],
+      [
+        "saved",
+        "List<ActivitySavedActivity>",
+        false,
+        []
+      ],
+      [
+        "collections",
+        "List<ActivityActivityCollection>",
+        false,
+        []
+      ],
+      [
+        "items",
+        "List<ActivityCollectionItem>",
+        false,
+        []
+      ],
+      [
+        "schemaVersion",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]
