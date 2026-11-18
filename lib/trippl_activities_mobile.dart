@@ -94,3 +94,4 @@ export 'activity_core/models/itinerary_stop.dart';
 export 'activity_core/models/itinerary_conflict.dart';
 export 'activity_core/models/activity_reminder.dart';
 export 'activity_core/models/activity_notification.dart';
+export 'activity_core/models/activity_preference.dart';

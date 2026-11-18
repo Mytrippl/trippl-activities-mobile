@@ -4366,5 +4366,59 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityActivityPreference",
+    "activity_preference",
+    [
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "updatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "language",
+        "String",
+        false,
+        "en"
+      ],
+      [
+        "currency",
+        "String",
+        false,
+        "USD"
+      ],
+      [
+        "hideSaved",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "offlineEnabled",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "sortField",
+        "String",
+        false,
+        "recommended"
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]

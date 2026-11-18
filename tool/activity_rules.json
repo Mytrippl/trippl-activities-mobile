@@ -72,5 +72,6 @@
   "ActivityItineraryStop": "if(revision<1||!endsAt.isAfter(startsAt)||arrivalBufferMinutes>1440||transferMinutes>1440)",
   "ActivityItineraryConflict": "if(!{'information','warning','error'}.contains(severity))",
   "ActivityActivityReminder": "if(revision<1||leadMinutes>10080||dueAt.isBefore(createdAt))",
-  "ActivityActivityNotification": "if(revision<1||!expiresAt.isAfter(createdAt)||!{'booking','voucher','cancellation','refund','reminder','conflict'}.contains(kind))"
+  "ActivityActivityNotification": "if(revision<1||!expiresAt.isAfter(createdAt)||!{'booking','voucher','cancellation','refund','reminder','conflict'}.contains(kind))",
+  "ActivityActivityPreference": "if(revision<1||!RegExp(r'^[A-Z]{3}$').hasMatch(currency)||!{'recommended','price','rating','duration','distance','title','reviewCount'}.contains(sortField))"
 }
