@@ -2140,5 +2140,59 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityFieldMask",
+    "field_mask",
+    [
+      [
+        "includePhotos",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "includeReviews",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "includeOptions",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "includeCancellation",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "maximumPhotos",
+        "int",
+        false,
+        5
+      ],
+      [
+        "maximumReviews",
+        "int",
+        false,
+        5
+      ],
+      [
+        "fields",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "version",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]

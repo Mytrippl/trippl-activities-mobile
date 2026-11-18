@@ -40,3 +40,4 @@ export 'activity_core/models/result_card.dart';
 export 'activity_core/models/comparison.dart';
 export 'activity_core/models/selection.dart';
 export 'activity_core/models/cache_entry.dart';
+export 'activity_core/models/field_mask.dart';

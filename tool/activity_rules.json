@@ -37,5 +37,6 @@
   "ActivityResultCard": "if(!{'unknown','available','unavailable','insufficientCapacity','stale'}.contains(availabilityState))",
   "ActivityComparison": "if(revision<1||productIds.length>4||productIds.toSet().length!=productIds.length||cards.length!=productIds.length)",
   "ActivitySelection": "if(revision<1||slotId!=null&&optionId==null)",
-  "ActivityCacheEntry": "if(schemaVersion!=1||!expiresAt.isAfter(savedAt)||requestFingerprint!=page.requestFingerprint||!RegExp(r'^[a-f0-9]{64}$').hasMatch(scopeFingerprint))"
+  "ActivityCacheEntry": "if(schemaVersion!=1||!expiresAt.isAfter(savedAt)||requestFingerprint!=page.requestFingerprint||!RegExp(r'^[a-f0-9]{64}$').hasMatch(scopeFingerprint))",
+  "ActivityFieldMask": "if(version!=1||maximumPhotos>20||maximumReviews>20)"
 }
