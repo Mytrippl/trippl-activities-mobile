@@ -116,3 +116,4 @@ export 'activity_core/booking_pickup.dart';
 export 'activity_core/booking_terms.dart';
 export 'activity_core/booking_quote_review.dart';
 export 'activity_core/booking_drafts.dart';
+export 'activity_core/booking_intents.dart';
