@@ -36,3 +36,4 @@ export 'activity_core/models/provider_request.dart';
 export 'activity_core/models/provider_page.dart';
 export 'activity_core/models/provider_failure.dart';
 export 'activity_core/models/discovery_state.dart';
+export 'activity_core/models/result_card.dart';
