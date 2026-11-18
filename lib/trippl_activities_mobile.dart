@@ -107,3 +107,4 @@ export 'activity_core/models/activity_export_policy.dart';
 export 'activity_core/models/export_bundle.dart';
 export 'activity_core/models/import_preview.dart';
 export 'activity_core/models/audit_event.dart';
+export 'activity_core/models/activity_dashboard.dart';

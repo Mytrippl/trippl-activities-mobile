@@ -5050,5 +5050,65 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityActivityDashboard",
+    "activity_dashboard",
+    [
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "evaluatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "savedCount",
+        "int",
+        false,
+        0
+      ],
+      [
+        "collectionCount",
+        "int",
+        false,
+        0
+      ],
+      [
+        "pendingBookingCount",
+        "int",
+        false,
+        0
+      ],
+      [
+        "confirmedBookingCount",
+        "int",
+        false,
+        0
+      ],
+      [
+        "unreadNotificationCount",
+        "int",
+        false,
+        0
+      ],
+      [
+        "syncPendingCount",
+        "int",
+        false,
+        0
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]
