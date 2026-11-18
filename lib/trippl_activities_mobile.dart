@@ -29,3 +29,4 @@ export 'activity_core/models/product.dart';
 export 'activity_core/models/slot.dart';
 export 'activity_core/models/availability.dart';
 export 'activity_core/models/availability_request.dart';
+export 'activity_core/models/search_query.dart';
