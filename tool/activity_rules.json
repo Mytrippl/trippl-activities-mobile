@@ -49,5 +49,6 @@
   "ActivityBookingContact": "if(revision<1||email.length>254||phone!=null&&phone!.length>30)",
   "ActivityBookingTraveler": "if(revision<1||age>120)",
   "ActivityPickupChoice": "if(revision<1||meetingPoint!=null&&meetingPoint!.id!=pointId)",
-  "ActivityTermsAcceptance": "if(revision<1||!RegExp(r'^[a-f0-9]{64}$').hasMatch(quoteDigest))"
+  "ActivityTermsAcceptance": "if(revision<1||!RegExp(r'^[a-f0-9]{64}$').hasMatch(quoteDigest))",
+  "ActivityBookingDraft": "if(revision<1||units<1||units>100||updatedAt.isBefore(createdAt)||slot.productId!=product.id||slot.optionId!=optionId||!{'editing','review','submitting','pending','confirmed','rejected','unknown','abandoned'}.contains(state))"
 }
