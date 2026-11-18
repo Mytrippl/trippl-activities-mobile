@@ -4306,5 +4306,65 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityActivityNotification",
+    "activity_notification",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "resourceId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "kind",
+        "String",
+        true,
+        null
+      ],
+      [
+        "createdAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "expiresAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "read",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "dismissed",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]
