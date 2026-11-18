@@ -7,3 +7,4 @@ export 'activity_core/models/photo.dart';
 export 'activity_core/models/review.dart';
 export 'activity_core/models/rating.dart';
 export 'activity_core/models/duration.dart';
+export 'activity_core/models/guide_language.dart';

@@ -304,5 +304,47 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityGuideLanguage",
+    "guide_language",
+    [
+      [
+        "code",
+        "String",
+        true,
+        null
+      ],
+      [
+        "name",
+        "String",
+        false,
+        null
+      ],
+      [
+        "kind",
+        "String",
+        false,
+        "guide"
+      ],
+      [
+        "available",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "requiresSelection",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "optionId",
+        "String",
+        false,
+        null
+      ]
+    ]
   ]
 ]
