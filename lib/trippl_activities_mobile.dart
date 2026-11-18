@@ -13,3 +13,4 @@ export 'activity_core/models/traveler.dart';
 export 'activity_core/models/traveler_mix.dart';
 export 'activity_core/models/eligibility.dart';
 export 'activity_core/models/money.dart';
+export 'activity_core/models/price_component.dart';

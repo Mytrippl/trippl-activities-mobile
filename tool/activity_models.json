@@ -550,5 +550,53 @@
         2
       ]
     ]
+  ],
+  [
+    "ActivityPriceComponent",
+    "price_component",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "label",
+        "String",
+        true,
+        null
+      ],
+      [
+        "unit",
+        "ActivityMoney",
+        true,
+        null
+      ],
+      [
+        "quantity",
+        "int",
+        false,
+        1
+      ],
+      [
+        "kind",
+        "String",
+        false,
+        "base"
+      ],
+      [
+        "category",
+        "String",
+        false,
+        null
+      ],
+      [
+        "included",
+        "bool",
+        false,
+        true
+      ]
+    ]
   ]
 ]

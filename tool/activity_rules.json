@@ -11,5 +11,6 @@
   "ActivityTraveler": "if(age>120)",
   "ActivityTravelerMix": "if(revision<1||minimumTravelers<1||maximumTravelers>100||minimumTravelers>maximumTravelers||travelers.map((t)=>t.id).toSet().length!=travelers.length||!{'perPerson','perGroup','perUnit','unknown'}.contains(pricingBasis))",
   "ActivityEligibility": "if(totalTravelers>100||capacityTravelers>totalTravelers||assignedCategories.length>totalTravelers)",
-  "ActivityMoney": "if(!RegExp(r'^[A-Z]{3}$').hasMatch(currency)||decimals>4)"
+  "ActivityMoney": "if(!RegExp(r'^[A-Z]{3}$').hasMatch(currency)||decimals>4)",
+  "ActivityPriceComponent": "if(quantity<1||quantity>100||!{'base','tax','fee','discount'}.contains(kind))"
 }
