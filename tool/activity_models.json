@@ -3034,5 +3034,59 @@
         []
       ]
     ]
+  ],
+  [
+    "ActivityBookingStatus",
+    "booking_status",
+    [
+      [
+        "bookingId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "observedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "state",
+        "String",
+        true,
+        null
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ],
+      [
+        "providerReference",
+        "String",
+        false,
+        null
+      ],
+      [
+        "total",
+        "ActivityMoney",
+        false,
+        null
+      ],
+      [
+        "warningCodes",
+        "List<String>",
+        false,
+        []
+      ]
+    ]
   ]
 ]
