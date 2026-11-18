@@ -112,5 +112,59 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityPhoto",
+    "photo",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "url",
+        "String",
+        true,
+        null
+      ],
+      [
+        "width",
+        "int",
+        false,
+        null
+      ],
+      [
+        "height",
+        "int",
+        false,
+        null
+      ],
+      [
+        "caption",
+        "String",
+        false,
+        null
+      ],
+      [
+        "observedAt",
+        "instant",
+        false,
+        null
+      ],
+      [
+        "expiresAt",
+        "instant",
+        false,
+        null
+      ],
+      [
+        "attributions",
+        "List<ActivityAttribution>",
+        false,
+        []
+      ]
+    ]
   ]
 ]
