@@ -1018,5 +1018,53 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityAccessibility",
+    "accessibility",
+    [
+      [
+        "wheelchairAccessible",
+        "bool",
+        false,
+        null
+      ],
+      [
+        "strollerAccessible",
+        "bool",
+        false,
+        null
+      ],
+      [
+        "serviceAnimalsAllowed",
+        "bool",
+        false,
+        null
+      ],
+      [
+        "minimumFitness",
+        "String",
+        false,
+        null
+      ],
+      [
+        "restrictions",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "confirmed",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "observedAt",
+        "instant",
+        false,
+        null
+      ]
+    ]
   ]
 ]

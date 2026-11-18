@@ -22,3 +22,4 @@ export 'activity_core/models/cancellation_policy.dart';
 export 'activity_core/models/cancellation_assessment.dart';
 export 'activity_core/models/meeting_point.dart';
 export 'activity_core/models/pickup.dart';
+export 'activity_core/models/accessibility.dart';
