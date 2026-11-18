@@ -28,11 +28,11 @@ String tripplActivityCancellationSummary(
   switch (type) {
     case 'STANDARD':
       if (mode == 1) {
-        return isTR ? 'Ücretsiz iptal' : 'Free cancellation';
+        return isTR ? 'İptal koşullarını kontrol et' : 'Check cancellation terms';
       } else {
         return isTR
-            ? 'Kolayca iptal et, ücretinin tamamını geri al.'
-            : 'Cancel easily and receive a full refund.';
+            ? 'İade uygunluğunu ve iptal son tarihini kontrol et.'
+            : 'Check the cancellation deadline and refund conditions.';
       }
 
     case 'CUSTOM':
