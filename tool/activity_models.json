@@ -1642,5 +1642,35 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivitySearchSort",
+    "search_sort",
+    [
+      [
+        "field",
+        "String",
+        false,
+        "recommended"
+      ],
+      [
+        "descending",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "unknownLast",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "tieBreak",
+        "String",
+        false,
+        "id"
+      ]
+    ]
   ]
 ]

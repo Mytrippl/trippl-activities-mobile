@@ -31,3 +31,4 @@ export 'activity_core/models/availability.dart';
 export 'activity_core/models/availability_request.dart';
 export 'activity_core/models/search_query.dart';
 export 'activity_core/models/search_filter.dart';
+export 'activity_core/models/search_sort.dart';
