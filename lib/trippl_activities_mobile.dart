@@ -50,3 +50,4 @@ export 'activity_core/activity_money.dart';
 export 'activity_core/activity_pricing.dart';
 export 'activity_core/activity_cancellation.dart';
 export 'activity_core/activity_details.dart';
+export 'activity_core/provider_adapter.dart';
