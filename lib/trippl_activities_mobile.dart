@@ -16,3 +16,4 @@ export 'activity_core/models/money.dart';
 export 'activity_core/models/price_component.dart';
 export 'activity_core/models/price_rule.dart';
 export 'activity_core/models/price_quote.dart';
+export 'activity_core/models/price_breakdown.dart';

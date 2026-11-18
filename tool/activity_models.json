@@ -730,5 +730,53 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityPriceBreakdown",
+    "price_breakdown",
+    [
+      [
+        "evaluatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "total",
+        "ActivityMoney",
+        true,
+        null
+      ],
+      [
+        "components",
+        "List<ActivityPriceComponent>",
+        false,
+        []
+      ],
+      [
+        "travelerCount",
+        "int",
+        true,
+        null
+      ],
+      [
+        "basis",
+        "String",
+        false,
+        "unknown"
+      ],
+      [
+        "complete",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "warningCodes",
+        "List<String>",
+        false,
+        []
+      ]
+    ]
   ]
 ]
