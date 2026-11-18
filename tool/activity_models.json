@@ -4948,5 +4948,59 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityImportPreview",
+    "import_preview",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "evaluatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "sourceDigest",
+        "String",
+        true,
+        null
+      ],
+      [
+        "products",
+        "List<ActivityProduct>",
+        false,
+        []
+      ],
+      [
+        "duplicateIds",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "rejectedCount",
+        "int",
+        false,
+        0
+      ],
+      [
+        "warningCodes",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "requiresConfirmation",
+        "bool",
+        false,
+        true
+      ]
+    ]
   ]
 ]
