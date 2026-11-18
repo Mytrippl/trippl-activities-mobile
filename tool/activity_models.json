@@ -598,5 +598,65 @@
         true
       ]
     ]
+  ],
+  [
+    "ActivityPriceRule",
+    "price_rule",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "money",
+        "ActivityMoney",
+        true,
+        null
+      ],
+      [
+        "basis",
+        "String",
+        false,
+        "perPerson"
+      ],
+      [
+        "category",
+        "String",
+        false,
+        null
+      ],
+      [
+        "minimumTravelers",
+        "int",
+        false,
+        1
+      ],
+      [
+        "maximumTravelers",
+        "int",
+        false,
+        100
+      ],
+      [
+        "minimumUnits",
+        "int",
+        false,
+        1
+      ],
+      [
+        "maximumUnits",
+        "int",
+        false,
+        null
+      ],
+      [
+        "priority",
+        "int",
+        false,
+        0
+      ]
+    ]
   ]
 ]
