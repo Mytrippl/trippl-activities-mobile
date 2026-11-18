@@ -2572,5 +2572,53 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityBookingContact",
+    "booking_contact",
+    [
+      [
+        "email",
+        "String",
+        true,
+        null
+      ],
+      [
+        "phone",
+        "String",
+        false,
+        null
+      ],
+      [
+        "givenName",
+        "String",
+        false,
+        null
+      ],
+      [
+        "familyName",
+        "String",
+        false,
+        null
+      ],
+      [
+        "language",
+        "String",
+        false,
+        "en"
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ],
+      [
+        "updatedAt",
+        "instant",
+        true,
+        null
+      ]
+    ]
   ]
 ]

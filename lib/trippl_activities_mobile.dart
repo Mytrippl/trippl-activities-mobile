@@ -64,3 +64,4 @@ export 'activity_core/models/question_choice.dart';
 export 'activity_core/models/question.dart';
 export 'activity_core/models/answer.dart';
 export 'activity_core/models/answer_set.dart';
+export 'activity_core/models/booking_contact.dart';

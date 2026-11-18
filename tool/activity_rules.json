@@ -45,5 +45,6 @@
   "ActivityQuestionChoice": "if(revision<1||value.length>200)",
   "ActivityQuestion": "if(revision<1||maximumLength<1||maximumLength>2000||!{'text','choice','multiChoice','integer','boolean','date'}.contains(kind)||minimumNumber!=null&&maximumNumber!=null&&minimumNumber!>maximumNumber!||choices.map((c)=>c.id).toSet().length!=choices.length)",
   "ActivityAnswer": "if(revision<1||values.toSet().length!=values.length)",
-  "ActivityAnswerSet": "if(revision<1||questionRevision<1)"
+  "ActivityAnswerSet": "if(revision<1||questionRevision<1)",
+  "ActivityBookingContact": "if(revision<1||email.length>254||phone!=null&&phone!.length>30)"
 }
