@@ -112,3 +112,4 @@ export 'activity_core/booking_guard.dart';
 export 'activity_core/booking_questions.dart';
 export 'activity_core/booking_contacts.dart';
 export 'activity_core/booking_travelers.dart';
+export 'activity_core/booking_pickup.dart';
