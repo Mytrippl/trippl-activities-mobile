@@ -2620,5 +2620,53 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityBookingTraveler",
+    "booking_traveler",
+    [
+      [
+        "travelerId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "age",
+        "int",
+        true,
+        null
+      ],
+      [
+        "givenName",
+        "String",
+        false,
+        null
+      ],
+      [
+        "familyName",
+        "String",
+        false,
+        null
+      ],
+      [
+        "dateOfBirth",
+        "day",
+        false,
+        null
+      ],
+      [
+        "lead",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]
