@@ -118,3 +118,4 @@ export 'activity_core/booking_quote_review.dart';
 export 'activity_core/booking_drafts.dart';
 export 'activity_core/booking_intents.dart';
 export 'activity_core/booking_transport.dart';
+export 'activity_core/booking_controller.dart';
