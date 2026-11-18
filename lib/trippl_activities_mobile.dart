@@ -129,3 +129,4 @@ export 'activity_core/activity_itineraries.dart';
 export 'activity_core/booking_reminders.dart';
 export 'activity_core/activity_preferences.dart';
 export 'activity_core/activity_privacy.dart';
+export 'activity_core/activity_history.dart';
