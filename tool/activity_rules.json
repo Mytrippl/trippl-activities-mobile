@@ -35,5 +35,6 @@
   "ActivityProviderFailure": "if(!RegExp(r'^[A-Za-z0-9_-]{1,80}$').hasMatch(code)||operation!='read'||retryAfterSeconds!=null&&retryAfterSeconds!>120)",
   "ActivityDiscoveryState": "if(generation<1||attempt<1||attempt>3||!{'loading','ready','failed','cancelled'}.contains(state)||state=='ready'&&page==null||state=='failed'&&failure==null||!RegExp(r'^[a-f0-9]{64}$').hasMatch(scopeFingerprint))",
   "ActivityResultCard": "if(!{'unknown','available','unavailable','insufficientCapacity','stale'}.contains(availabilityState))",
-  "ActivityComparison": "if(revision<1||productIds.length>4||productIds.toSet().length!=productIds.length||cards.length!=productIds.length)"
+  "ActivityComparison": "if(revision<1||productIds.length>4||productIds.toSet().length!=productIds.length||cards.length!=productIds.length)",
+  "ActivitySelection": "if(revision<1||slotId!=null&&optionId==null)"
 }

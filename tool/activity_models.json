@@ -2038,5 +2038,59 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivitySelection",
+    "selection",
+    [
+      [
+        "productId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "optionId",
+        "String",
+        false,
+        null
+      ],
+      [
+        "slotId",
+        "String",
+        false,
+        null
+      ],
+      [
+        "languageCode",
+        "String",
+        false,
+        null
+      ],
+      [
+        "pickupPointId",
+        "String",
+        false,
+        null
+      ],
+      [
+        "updatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ],
+      [
+        "requestFingerprint",
+        "String",
+        false,
+        null
+      ]
+    ]
   ]
 ]
