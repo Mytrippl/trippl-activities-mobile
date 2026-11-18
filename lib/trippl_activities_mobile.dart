@@ -81,3 +81,4 @@ export 'activity_core/models/voucher_document.dart';
 export 'activity_core/models/voucher.dart';
 export 'activity_core/models/voucher_access.dart';
 export 'activity_core/models/cancellation_request.dart';
+export 'activity_core/models/cancellation_result.dart';
