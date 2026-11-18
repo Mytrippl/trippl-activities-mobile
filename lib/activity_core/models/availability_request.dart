@@ -14,6 +14,7 @@ class ActivityAvailabilityRequest {
     this.selectedSlotId,
     this.selectedLanguage,
     this.revision = 1,
+    this.units = 1,
   });
 
   final String productId;
@@ -25,6 +26,7 @@ class ActivityAvailabilityRequest {
   final String? selectedSlotId;
   final String? selectedLanguage;
   final int revision;
+  final int units;
 
   factory ActivityAvailabilityRequest.fromJson(Map<String, Object?> json) {
     ActivityCodec.keys(json, {
@@ -37,6 +39,7 @@ class ActivityAvailabilityRequest {
       "selectedSlotId",
       "selectedLanguage",
       "revision",
+      "units",
     });
     final value = ActivityAvailabilityRequest(
       productId: ActivityCodec.text(json, 'productId', required: true)!,
@@ -60,6 +63,14 @@ class ActivityAvailabilityRequest {
           ActivityCodec.integer(
             json,
             'revision',
+            minimum: 0,
+            maximum: 9000000000000,
+          ) ??
+          1,
+      units:
+          ActivityCodec.integer(
+            json,
+            'units',
             minimum: 0,
             maximum: 9000000000000,
           ) ??
@@ -104,6 +115,7 @@ class ActivityAvailabilityRequest {
     String? selectedSlotId,
     String? selectedLanguage,
     int? revision,
+    int? units,
   }) {
     final clearableFields = <String>{"selectedSlotId", "selectedLanguage"};
     if (clear.any((key) => !clearableFields.contains(key)))
@@ -122,6 +134,7 @@ class ActivityAvailabilityRequest {
           ? null
           : (selectedLanguage ?? this.selectedLanguage),
       revision: (revision ?? this.revision),
+      units: (units ?? this.units),
     );
   }
 
@@ -192,7 +205,19 @@ class ActivityAvailabilityRequest {
           ),
         );
     }
-    if (revision < 1 ||
+    {
+      if (units < 0 || units > 9000000000000)
+        validationIssues.add(
+          const ActivityIssue(
+            'units',
+            'range',
+            'Number is outside the activity limits',
+          ),
+        );
+    }
+    if (units < 1 ||
+        units > 100 ||
+        revision < 1 ||
         !RegExp(r'^[A-Z]{3}$').hasMatch(currency) ||
         language.length > 20)
       validationIssues.add(
@@ -215,6 +240,7 @@ class ActivityAvailabilityRequest {
     if (selectedSlotId != null) "selectedSlotId": selectedSlotId,
     if (selectedLanguage != null) "selectedLanguage": selectedLanguage,
     "revision": revision,
+    "units": units,
   };
 
   @override

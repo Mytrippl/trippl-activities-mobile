@@ -26,7 +26,7 @@
   "ActivityProduct": "if(revision<1||observedAt!=null&&expiresAt!=null&&!expiresAt!.isAfter(observedAt!)||options.any((o)=>o.productId!=id)||options.map((o)=>o.id).toSet().length!=options.length)",
   "ActivitySlot": "if(revision<1||!expiresAt.isAfter(observedAt)||endsAt!=null&&!endsAt!.isAfter(startsAt)||remainingCapacity!=null&&remainingCapacity!>100000||!{'unknown','available','soldOut','unavailable'}.contains(state))",
   "ActivityAvailability": "if(travelerCount<1||travelerCount>100||!{'unknown','available','unavailable','insufficientCapacity','stale'}.contains(state)||slots.any((s)=>s.productId!=productId||s.optionId!=optionId)||slots.map((s)=>s.id).toSet().length!=slots.length)",
-  "ActivityAvailabilityRequest": "if(revision<1||!RegExp(r'^[A-Z]{3}$').hasMatch(currency)||language.length>20)",
+  "ActivityAvailabilityRequest": "if(units<1||units>100||revision<1||!RegExp(r'^[A-Z]{3}$').hasMatch(currency)||language.length>20)",
   "ActivitySearchQuery": "if(limit<1||limit>100||offset>10000||startDate!=null&&endDate!=null&&endDate!.isBefore(startDate!)||!RegExp(r'^[A-Z]{3}$').hasMatch(currency)||language.length>20)",
   "ActivitySearchFilter": "if(minimumPriceMinor!=null&&maximumPriceMinor!=null&&minimumPriceMinor!>maximumPriceMinor!||(minimumPriceMinor!=null||maximumPriceMinor!=null)&&currency==null||minimumRating!=null&&(minimumRating!<0||minimumRating!>5)||minimumDurationMinutes!=null&&maximumDurationMinutes!=null&&minimumDurationMinutes!>maximumDurationMinutes!||radiusMeters!=null&&(radiusMeters!<1||radiusMeters!>50000||center==null))",
   "ActivitySearchSort": "if(!{'recommended','price','rating','reviewCount','duration','distance','title'}.contains(field)||tieBreak!='id')",
