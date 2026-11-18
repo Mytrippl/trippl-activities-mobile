@@ -39,5 +39,6 @@
   "ActivitySelection": "if(revision<1||slotId!=null&&optionId==null)",
   "ActivityCacheEntry": "if(schemaVersion!=1||!expiresAt.isAfter(savedAt)||requestFingerprint!=page.requestFingerprint||!RegExp(r'^[a-f0-9]{64}$').hasMatch(scopeFingerprint))",
   "ActivityFieldMask": "if(version!=1||maximumPhotos>20||maximumReviews>20)",
-  "ActivitySearchResult": "if(limit<1||limit>100||offset>10000||products.length>limit||matchedCount<products.length||!RegExp(r'^[a-f0-9]{64}$').hasMatch(resultFingerprint))"
+  "ActivitySearchResult": "if(limit<1||limit>100||offset>10000||products.length>limit||matchedCount<products.length||!RegExp(r'^[a-f0-9]{64}$').hasMatch(resultFingerprint))",
+  "ActivityDeparture": "if(endsAt!=null&&!endsAt!.isAfter(startsAt))"
 }
