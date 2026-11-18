@@ -3178,5 +3178,59 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityBookingEvent",
+    "booking_event",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "bookingId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "kind",
+        "String",
+        true,
+        null
+      ],
+      [
+        "occurredAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ],
+      [
+        "reasonCodes",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "intentId",
+        "String",
+        false,
+        null
+      ]
+    ]
   ]
 ]
