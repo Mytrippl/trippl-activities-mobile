@@ -64,5 +64,53 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityAttribution",
+    "attribution",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "displayName",
+        "String",
+        true,
+        null
+      ],
+      [
+        "uri",
+        "String",
+        false,
+        null
+      ],
+      [
+        "kind",
+        "String",
+        false,
+        "provider"
+      ],
+      [
+        "required",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "license",
+        "String",
+        false,
+        null
+      ],
+      [
+        "observedAt",
+        "instant",
+        false,
+        null
+      ]
+    ]
   ]
 ]

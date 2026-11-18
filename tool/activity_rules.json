@@ -1,4 +1,5 @@
 {
   "ActivityCoordinate": "if(latitude< -90 || latitude>90 || longitude< -180 || longitude>180)",
-  "ActivityAddress": "if(countryCode!=null&&!RegExp(r'^[A-Z]{2}$').hasMatch(countryCode!))"
+  "ActivityAddress": "if(countryCode!=null&&!RegExp(r'^[A-Z]{2}$').hasMatch(countryCode!))",
+  "ActivityAttribution": "if(!{'provider','photo','review','author','license'}.contains(kind) || uri!=null&&(Uri.tryParse(uri!)?.scheme!='https'||Uri.tryParse(uri!)!.host.isEmpty||Uri.tryParse(uri!)!.userInfo.isNotEmpty))"
 }
