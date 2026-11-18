@@ -2092,5 +2092,53 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityCacheEntry",
+    "cache_entry",
+    [
+      [
+        "scopeFingerprint",
+        "String",
+        true,
+        null
+      ],
+      [
+        "requestFingerprint",
+        "String",
+        true,
+        null
+      ],
+      [
+        "savedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "expiresAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "page",
+        "ActivityProviderPage",
+        true,
+        null
+      ],
+      [
+        "offline",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "schemaVersion",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]
