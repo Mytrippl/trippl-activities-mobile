@@ -3682,5 +3682,53 @@
         []
       ]
     ]
+  ],
+  [
+    "ActivityRefundEstimate",
+    "refund_estimate",
+    [
+      [
+        "bookingId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "evaluatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "assessment",
+        "ActivityCancellationAssessment",
+        true,
+        null
+      ],
+      [
+        "paid",
+        "ActivityMoney",
+        true,
+        null
+      ],
+      [
+        "indicative",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "requiresProviderConfirmation",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "reasonCodes",
+        "List<String>",
+        false,
+        []
+      ]
+    ]
   ]
 ]
