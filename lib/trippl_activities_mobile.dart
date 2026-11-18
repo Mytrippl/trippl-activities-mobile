@@ -85,3 +85,4 @@ export 'activity_core/models/cancellation_result.dart';
 export 'activity_core/models/refund_estimate.dart';
 export 'activity_core/models/refund_record.dart';
 export 'activity_core/models/support_case.dart';
+export 'activity_core/models/saved_activity.dart';

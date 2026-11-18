@@ -63,5 +63,6 @@
   "ActivityCancellationRequest": "if(expectedRevision<1||!RegExp(r'^[a-f0-9]{64}$').hasMatch(idempotencyKey)||!RegExp(r'^[A-Za-z0-9_-]{1,80}$').hasMatch(reasonCode))",
   "ActivityCancellationResult": "if(revision<1||!{'pending','cancelled','rejected','unknown'}.contains(state))",
   "ActivityRefundRecord": "if(revision<1||!{'pending','processed','failed','unknown'}.contains(state)||state=='processed'&&completedAt==null)",
-  "ActivitySupportCase": "if(revision<1||updatedAt.isBefore(createdAt)||summary.length>1000||!{'booking','pickup','voucher','cancellation','refund','other'}.contains(category)||!{'draft','submitted','open','resolved'}.contains(state))"
+  "ActivitySupportCase": "if(revision<1||updatedAt.isBefore(createdAt)||summary.length>1000||!{'booking','pickup','voucher','cancellation','refund','other'}.contains(category)||!{'draft','submitted','open','resolved'}.contains(state))",
+  "ActivitySavedActivity": "if(revision<1||priority>5||updatedAt.isBefore(savedAt)||note!=null&&note!.length>2000)"
 }

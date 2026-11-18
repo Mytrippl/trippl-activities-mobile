@@ -3856,5 +3856,59 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivitySavedActivity",
+    "saved_activity",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "product",
+        "ActivityProduct",
+        true,
+        null
+      ],
+      [
+        "savedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "updatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "priority",
+        "int",
+        false,
+        0
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ],
+      [
+        "note",
+        "String",
+        false,
+        null
+      ]
+    ]
   ]
 ]
