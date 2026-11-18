@@ -4642,5 +4642,47 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivitySyncBatch",
+    "sync_batch",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "createdAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "mutations",
+        "List<ActivitySyncMutation>",
+        false,
+        []
+      ],
+      [
+        "generation",
+        "int",
+        false,
+        1
+      ],
+      [
+        "cursor",
+        "String",
+        false,
+        null
+      ]
+    ]
   ]
 ]
