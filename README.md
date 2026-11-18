@@ -1,172 +1,76 @@
 # Trippl Activities Mobile
 
-Mobile-side activity and attraction search, availability, pricing, traveler eligibility, ratings, cancellation, duration, and guide-language components used within Mytrippl.
+Mobile-side activity discovery, traveler eligibility, option pricing, availability, cancellation and experience presentation used within Mytrippl.
 
-This repository contains the custom Dart layer supporting Mytrippl's activities and attractions experience. It prepares availability searches, processes traveler age requirements, interprets activity pricing models, transforms ratings and attraction information into presentation-ready states, and handles cancellation, duration, and guide-language information.
+The repository contains the existing FlutterFlow custom functions and an independently testable Dart processing layer. It prepares activity searches, validates supplier age bands, calculates traveler-adjusted prices and coordinates option, departure and quote selection. Inventory and booking operations are supplied separately by the host application and backend.
 
-## Core Capabilities
+## Activity Discovery
 
-### Activity Search
+`ActivitySearch` applies destination, text, category, rating, duration, guide-language, accessibility, cancellation and distance filters. Price ranges carry an explicit currency. Results have stable ordering, pagination and completeness information. Missing ratings, prices and accessibility details remain unknown.
 
-Custom utilities prepare activity information for search and discovery within the mobile application.
+`ActivityRequests` creates account-scoped search, detail, availability and quote reads. `ActivityDiscoveryController` validates response identity and freshness, bounds retries and prevents late responses from replacing newer state. `ActivitySearchDebouncer` coordinates rapid search edits. `ActivityPagination` detects repeated cursors and conflicting product snapshots.
 
-The module includes:
+## Travelers and Age Bands
 
-- Activity search-type handling
-- Activity option presentation
-- Availability search preparation
-- Guest-aware search data
-- Activity result presentation
+`ActivityTravelers` recognizes supplier `startAge` and `endAge` fields and validates category bounds, overlapping bands, booking limits and adult accompaniment. Capacity-exempt travelers remain included in the total party. Missing supplier age bands require review rather than being replaced with invented eligibility rules.
 
-This provides a consistent processing layer between the application interface and activity inventory services.
+Traveler records contain the information needed for this stage: an internal identifier, age and optional category context. They do not require names or contact details.
 
-### Availability Processing
+## Activity Pricing
 
-Activity inventory can depend on date, option, and traveler composition.
+`ActivityAmounts` represents money in integer minor units with explicit currency precision. Decimal parsing does not guess thousands separators or silently round excess precision.
 
-The module prepares structured availability requests using the information selected in the mobile experience, allowing activity options and traveler requirements to be passed into the availability flow consistently.
+`ActivityPricing` supports per-person, per-group and per-unit rules, separates taxes, fees and discounts, and rejects ambiguous rule selection. Provider quotes are bound to a product, option, slot, currency and request fingerprint and have an explicit expiry. Local calculations remain indicative until the provider supplies a valid quote.
 
-### Traveler Age Bands
+`ActivityOptionQuotes` compares calculated totals for the same party. `ActivityComparisonBoard` compares up to four activities and flags differences in pricing basis or currency precision.
 
-Activities can apply different eligibility and pricing rules according to traveler age.
+## Availability and Departure Selection
 
-Custom utilities handle:
+`ActivityInventory` requires fresh slot status, known capacity, traveler eligibility and an explicit local UTC offset before presenting availability. A non-empty slot list alone does not establish bookability. Selected guide languages, meeting points and pickup choices are validated against the option and departure context.
 
-- Activity age bands
-- Traveler count calculation
-- Guest classification
-- Age-aware availability data
+`ActivityWorkspace` coordinates discovery, local refinement, comparison inputs, product and option selection, availability reads and quote review. Changing relevant query or selection inputs invalidates dependent availability and quotes. Readiness means the selection can proceed to host review; it does not confirm a booking or payment.
 
-This allows traveler information from Mytrippl to be converted into structures suitable for activity searches and availability checks.
+## Cancellation and Details
 
-### Activity Pricing
+Cancellation assessments use explicit cutoffs, refund percentages and fees. Unknown or expired policy data stays unresolved. A generic standard policy without deadlines is not presented as an unconditional refund promise.
 
-Different activities can expose different pricing structures.
+Detail presentation covers fixed and ranged durations, guide, audio and written languages, reviews, photos, inclusions, meeting instructions and accessibility. Attribution remains attached to displayed provider and media content. Resource links must use credential-free HTTPS.
 
-Supporting logic includes:
+## Local Discovery Cache
 
-- Pricing-type interpretation
-- Activity price presentation
-- Attraction price-level presentation
-- Price-level normalization
-- Presentation-ready pricing states
+`ActivityDiscoveryCache` accepts a host-provided `ActivityLocalStorage`. Entries are account-scoped, size bounded and checked for integrity and expiry. Stale restoration is explicit. Live availability and quotes are not cached as discovery pages.
 
-### Ratings
-
-Raw rating information is converted into consistent values and visual states for the mobile interface.
-
-The module includes:
-
-- Activity rating normalization
-- Rating-value processing
-- Rating-box visual states
-- Attraction rating presentation
-
-### Attraction Information
-
-Activity results can include contextual information about the attraction or experience.
-
-Supporting utilities handle:
-
-- Attraction distance presentation
-- Attraction price levels
-- Activity option names
-- Search-result context
-
-### Cancellation Policies
-
-Cancellation information is transformed into concise presentation states that can be displayed within activity details and booking flows.
-
-Custom logic summarizes activity cancellation conditions without requiring individual interface components to interpret raw policy data directly.
-
-### Duration Presentation
-
-Activity duration data can arrive in different formats depending on the underlying experience.
-
-The mobile layer normalizes this information into consistent duration summaries for presentation throughout the activity experience.
-
-### Guide Languages
-
-Activities can provide guides or experiences in one or more supported languages.
-
-The module handles:
-
-- Guide-language data
-- Guide-language presentation
-- Language titles
-- Consistent language information across activity options
-
-### Activity Result Processing
-
-Activity search results can be processed before presentation using dedicated filtering and sorting utilities.
-
-Results can be filtered using:
-
-- Minimum and maximum price
-- Minimum rating
-- Free-cancellation availability
-- Instant confirmation
-- Minimum and maximum duration
-- Guide language
-- Current bookability
-
-Results can also be ordered by price, rating, review count, and duration while preserving the original provider ordering when recommended sorting is selected.
-
-### Pricing and Availability Processing
-
-Pricing utilities normalize different activity pricing structures, including per-person and per-group pricing. They calculate traveler-adjusted totals and expose original pricing and discount information when available.
-
-Availability processing evaluates bookability, remaining capacity, available time slots, requested traveler counts, and the earliest available time.
-
-### Traveler Validation
-
-Traveler validation maps passenger ages against activity age bands and checks:
-
-- Minimum traveler requirements
-- Maximum traveler requirements
-- Supported age ranges
-- Traveler category assignment
-- Unsupported traveler ages
-
-This allows invalid traveler combinations to be identified before an availability or booking request is prepared.
-
-### Search Request Construction
-
-The activity search request layer normalizes:
-
-- Destination and product identifiers
-- Travel dates
-- Adult, child, and infant counts
-- Currency and language
-- Pagination
-- Price and rating filters
-- Free-cancellation preferences
-
-Optional and empty values are omitted from generated request payloads.
+The host controls device storage protection, account sign-out cleanup and provider retention rules. Checksums detect corruption; they do not provide encryption or authentication.
 
 ## Repository Structure
 
-```text
-lib/
-└── custom_code/
-    └── functions/
-        └── Search, availability, traveler, pricing, rating, cancellation, duration, and guide-language logic
+- `lib/custom_code/functions`: existing FlutterFlow helpers with preserved parameter interfaces.
+- `lib/activity_core/models`: typed activity, traveler, pricing, policy and discovery records.
+- `lib/activity_core`: validation, requests, provider coordination, search, cache and presentation services.
+- `lib/trippl_activities_mobile.dart`: package exports.
+- `test`: offline contract, domain, lifecycle and legacy-helper regression tests.
+- `tool`: model generation, compatibility checks, source inventory and packaging.
+
+## Development
+
+Use Dart 3.13.7:
+
+```sh
+dart pub get --enforce-lockfile
+dart analyze
+dart test
+python3 tool/verify_generated.py
+python3 tool/verify_host_interfaces.py
+python3 tool/verify_legacy_helpers.py
+python3 tool/source_inventory.py
 ```
 
-## Technology
+Record definitions and validation rules live in `tool/activity_models.json` and `tool/activity_rules.json`. Run `python3 tool/generate_activity_models.py` to regenerate them, then format the model directory using Dart language version 3.10.
 
-The implementation is written in Dart for the Flutter-based Mytrippl mobile application.
+The standalone analyzer excludes FlutterFlow custom code because the full generated application and its platform dependencies are not included here. Three pure legacy helpers are tested through verified source extraction. The original function parameter interfaces are checked separately.
 
-The custom-code layer works with Mytrippl's activity search models, traveler information, availability data, pricing structures, application state, and generated Flutter components.
+See [integration notes](docs/integration.md) and [verification](docs/verification.md) for transport responsibilities and application testing boundaries.
 
-## Architecture
+## Source Package
 
-This repository represents the mobile processing and presentation layer of Mytrippl's activities experience.
-
-Activity inventory, availability, product details, and booking services are supplied separately through backend and external integrations. This module focuses on converting those structures into states that can be used consistently by the mobile interface.
-
-## Project Context
-
-Mytrippl integrates activities and attractions alongside flights, hotels, transport, eSIMs, and other travel services.
-
-This repository isolates the custom mobile engineering responsible for activity discovery, availability, traveler requirements, pricing, ratings, cancellation information, and experience presentation from the larger Mytrippl application codebase.
+Run `python3 tool/package_source.py` after committing changes. The tool writes a deterministic source archive, checksum and file manifest to `dist/` and verifies the archive contents. This is a source package, not an application binary.
