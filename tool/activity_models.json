@@ -346,5 +346,59 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityAgeBand",
+    "age_band",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "category",
+        "String",
+        true,
+        null
+      ],
+      [
+        "startAge",
+        "int",
+        true,
+        null
+      ],
+      [
+        "endAge",
+        "int",
+        true,
+        null
+      ],
+      [
+        "minimumTravelers",
+        "int",
+        false,
+        0
+      ],
+      [
+        "maximumTravelers",
+        "int",
+        false,
+        null
+      ],
+      [
+        "countsTowardCapacity",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "requiresAdult",
+        "bool",
+        false,
+        false
+      ]
+    ]
   ]
 ]
