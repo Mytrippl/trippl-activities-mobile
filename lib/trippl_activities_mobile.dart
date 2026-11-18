@@ -108,3 +108,4 @@ export 'activity_core/models/export_bundle.dart';
 export 'activity_core/models/import_preview.dart';
 export 'activity_core/models/audit_event.dart';
 export 'activity_core/models/activity_dashboard.dart';
+export 'activity_core/booking_guard.dart';

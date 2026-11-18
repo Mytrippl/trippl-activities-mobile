@@ -2,8 +2,8 @@
 import '../activity_codec.dart';
 import '../activity_issue.dart';
 
-class ActivityActivityPreference {
-  ActivityActivityPreference({
+class ActivityPreference {
+  ActivityPreference({
     required this.scope,
     required this.updatedAt,
     this.language = "en",
@@ -23,7 +23,7 @@ class ActivityActivityPreference {
   final String sortField;
   final int revision;
 
-  factory ActivityActivityPreference.fromJson(Map<String, Object?> json) {
+  factory ActivityPreference.fromJson(Map<String, Object?> json) {
     ActivityCodec.keys(json, {
       "scope",
       "updatedAt",
@@ -34,7 +34,7 @@ class ActivityActivityPreference {
       "sortField",
       "revision",
     });
-    final value = ActivityActivityPreference(
+    final value = ActivityPreference(
       scope: ActivityCodec.text(json, 'scope', required: true)!,
       updatedAt: ActivityCodec.date(json, 'updatedAt', required: true)!,
       language: ActivityCodec.text(json, 'language') ?? "en",
@@ -57,10 +57,10 @@ class ActivityActivityPreference {
     return value;
   }
 
-  static ActivityResult<ActivityActivityPreference> tryDecode(Object? input) {
+  static ActivityResult<ActivityPreference> tryDecode(Object? input) {
     try {
       return ActivityResult(
-        value: ActivityActivityPreference.fromJson(ActivityCodec.object(input)),
+        value: ActivityPreference.fromJson(ActivityCodec.object(input)),
       );
     } on ActivityValidationException catch (e) {
       return ActivityResult(issues: e.issues);
@@ -77,7 +77,7 @@ class ActivityActivityPreference {
     }
   }
 
-  ActivityActivityPreference copyWith({
+  ActivityPreference copyWith({
     Set<String> clear = const {},
     String? scope,
     DateTime? updatedAt,
@@ -91,7 +91,7 @@ class ActivityActivityPreference {
     final clearableFields = <String>{};
     if (clear.any((key) => !clearableFields.contains(key)))
       throw const FormatException('Only optional fields may be cleared');
-    return ActivityActivityPreference(
+    return ActivityPreference(
       scope: (scope ?? this.scope),
       updatedAt: (updatedAt ?? this.updatedAt),
       language: (language ?? this.language),
@@ -173,10 +173,10 @@ class ActivityActivityPreference {
 
   @override
   bool operator ==(Object other) =>
-      other is ActivityActivityPreference &&
+      other is ActivityPreference &&
       ActivityCodec.same(toJson(), other.toJson());
   @override
   int get hashCode => ActivityCodec.digest(toJson()).hashCode;
   @override
-  String toString() => 'ActivityActivityPreference(redacted)';
+  String toString() => 'ActivityPreference(redacted)';
 }

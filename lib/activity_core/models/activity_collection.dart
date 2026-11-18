@@ -2,8 +2,8 @@
 import '../activity_codec.dart';
 import '../activity_issue.dart';
 
-class ActivityActivityCollection {
-  ActivityActivityCollection({
+class ActivityCollection {
+  ActivityCollection({
     required this.id,
     required this.scope,
     required this.title,
@@ -25,7 +25,7 @@ class ActivityActivityCollection {
   final int revision;
   final String? description;
 
-  factory ActivityActivityCollection.fromJson(Map<String, Object?> json) {
+  factory ActivityCollection.fromJson(Map<String, Object?> json) {
     ActivityCodec.keys(json, {
       "id",
       "scope",
@@ -37,7 +37,7 @@ class ActivityActivityCollection {
       "revision",
       "description",
     });
-    final value = ActivityActivityCollection(
+    final value = ActivityCollection(
       id: ActivityCodec.text(json, 'id', required: true)!,
       scope: ActivityCodec.text(json, 'scope', required: true)!,
       title: ActivityCodec.text(json, 'title', required: true)!,
@@ -67,10 +67,10 @@ class ActivityActivityCollection {
     return value;
   }
 
-  static ActivityResult<ActivityActivityCollection> tryDecode(Object? input) {
+  static ActivityResult<ActivityCollection> tryDecode(Object? input) {
     try {
       return ActivityResult(
-        value: ActivityActivityCollection.fromJson(ActivityCodec.object(input)),
+        value: ActivityCollection.fromJson(ActivityCodec.object(input)),
       );
     } on ActivityValidationException catch (e) {
       return ActivityResult(issues: e.issues);
@@ -87,7 +87,7 @@ class ActivityActivityCollection {
     }
   }
 
-  ActivityActivityCollection copyWith({
+  ActivityCollection copyWith({
     Set<String> clear = const {},
     String? id,
     String? scope,
@@ -102,7 +102,7 @@ class ActivityActivityCollection {
     final clearableFields = <String>{"description"};
     if (clear.any((key) => !clearableFields.contains(key)))
       throw const FormatException('Only optional fields may be cleared');
-    return ActivityActivityCollection(
+    return ActivityCollection(
       id: (id ?? this.id),
       scope: (scope ?? this.scope),
       title: (title ?? this.title),
@@ -204,10 +204,10 @@ class ActivityActivityCollection {
 
   @override
   bool operator ==(Object other) =>
-      other is ActivityActivityCollection &&
+      other is ActivityCollection &&
       ActivityCodec.same(toJson(), other.toJson());
   @override
   int get hashCode => ActivityCodec.digest(toJson()).hashCode;
   @override
-  String toString() => 'ActivityActivityCollection(redacted)';
+  String toString() => 'ActivityCollection(redacted)';
 }

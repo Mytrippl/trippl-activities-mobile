@@ -2,8 +2,8 @@
 import '../activity_codec.dart';
 import '../activity_issue.dart';
 
-class ActivityActivityReminder {
-  ActivityActivityReminder({
+class ActivityReminder {
+  ActivityReminder({
     required this.id,
     required this.scope,
     required this.resourceId,
@@ -25,7 +25,7 @@ class ActivityActivityReminder {
   final bool delivered;
   final int revision;
 
-  factory ActivityActivityReminder.fromJson(Map<String, Object?> json) {
+  factory ActivityReminder.fromJson(Map<String, Object?> json) {
     ActivityCodec.keys(json, {
       "id",
       "scope",
@@ -37,7 +37,7 @@ class ActivityActivityReminder {
       "delivered",
       "revision",
     });
-    final value = ActivityActivityReminder(
+    final value = ActivityReminder(
       id: ActivityCodec.text(json, 'id', required: true)!,
       scope: ActivityCodec.text(json, 'scope', required: true)!,
       resourceId: ActivityCodec.text(json, 'resourceId', required: true)!,
@@ -68,10 +68,10 @@ class ActivityActivityReminder {
     return value;
   }
 
-  static ActivityResult<ActivityActivityReminder> tryDecode(Object? input) {
+  static ActivityResult<ActivityReminder> tryDecode(Object? input) {
     try {
       return ActivityResult(
-        value: ActivityActivityReminder.fromJson(ActivityCodec.object(input)),
+        value: ActivityReminder.fromJson(ActivityCodec.object(input)),
       );
     } on ActivityValidationException catch (e) {
       return ActivityResult(issues: e.issues);
@@ -88,7 +88,7 @@ class ActivityActivityReminder {
     }
   }
 
-  ActivityActivityReminder copyWith({
+  ActivityReminder copyWith({
     Set<String> clear = const {},
     String? id,
     String? scope,
@@ -103,7 +103,7 @@ class ActivityActivityReminder {
     final clearableFields = <String>{};
     if (clear.any((key) => !clearableFields.contains(key)))
       throw const FormatException('Only optional fields may be cleared');
-    return ActivityActivityReminder(
+    return ActivityReminder(
       id: (id ?? this.id),
       scope: (scope ?? this.scope),
       resourceId: (resourceId ?? this.resourceId),
@@ -185,10 +185,9 @@ class ActivityActivityReminder {
 
   @override
   bool operator ==(Object other) =>
-      other is ActivityActivityReminder &&
-      ActivityCodec.same(toJson(), other.toJson());
+      other is ActivityReminder && ActivityCodec.same(toJson(), other.toJson());
   @override
   int get hashCode => ActivityCodec.digest(toJson()).hashCode;
   @override
-  String toString() => 'ActivityActivityReminder(redacted)';
+  String toString() => 'ActivityReminder(redacted)';
 }

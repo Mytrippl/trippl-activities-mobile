@@ -2,8 +2,8 @@
 import '../activity_codec.dart';
 import '../activity_issue.dart';
 
-class ActivityActivityConsent {
-  ActivityActivityConsent({
+class ActivityConsent {
+  ActivityConsent({
     required this.id,
     required this.scope,
     required this.purpose,
@@ -23,7 +23,7 @@ class ActivityActivityConsent {
   final DateTime? expiresAt;
   final int revision;
 
-  factory ActivityActivityConsent.fromJson(Map<String, Object?> json) {
+  factory ActivityConsent.fromJson(Map<String, Object?> json) {
     ActivityCodec.keys(json, {
       "id",
       "scope",
@@ -34,7 +34,7 @@ class ActivityActivityConsent {
       "expiresAt",
       "revision",
     });
-    final value = ActivityActivityConsent(
+    final value = ActivityConsent(
       id: ActivityCodec.text(json, 'id', required: true)!,
       scope: ActivityCodec.text(json, 'scope', required: true)!,
       purpose: ActivityCodec.text(json, 'purpose', required: true)!,
@@ -57,10 +57,10 @@ class ActivityActivityConsent {
     return value;
   }
 
-  static ActivityResult<ActivityActivityConsent> tryDecode(Object? input) {
+  static ActivityResult<ActivityConsent> tryDecode(Object? input) {
     try {
       return ActivityResult(
-        value: ActivityActivityConsent.fromJson(ActivityCodec.object(input)),
+        value: ActivityConsent.fromJson(ActivityCodec.object(input)),
       );
     } on ActivityValidationException catch (e) {
       return ActivityResult(issues: e.issues);
@@ -77,7 +77,7 @@ class ActivityActivityConsent {
     }
   }
 
-  ActivityActivityConsent copyWith({
+  ActivityConsent copyWith({
     Set<String> clear = const {},
     String? id,
     String? scope,
@@ -91,7 +91,7 @@ class ActivityActivityConsent {
     final clearableFields = <String>{"expiresAt"};
     if (clear.any((key) => !clearableFields.contains(key)))
       throw const FormatException('Only optional fields may be cleared');
-    return ActivityActivityConsent(
+    return ActivityConsent(
       id: (id ?? this.id),
       scope: (scope ?? this.scope),
       purpose: (purpose ?? this.purpose),
@@ -176,10 +176,9 @@ class ActivityActivityConsent {
 
   @override
   bool operator ==(Object other) =>
-      other is ActivityActivityConsent &&
-      ActivityCodec.same(toJson(), other.toJson());
+      other is ActivityConsent && ActivityCodec.same(toJson(), other.toJson());
   @override
   int get hashCode => ActivityCodec.digest(toJson()).hashCode;
   @override
-  String toString() => 'ActivityActivityConsent(redacted)';
+  String toString() => 'ActivityConsent(redacted)';
 }

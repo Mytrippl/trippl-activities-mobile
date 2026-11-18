@@ -2,8 +2,8 @@
 import '../activity_codec.dart';
 import '../activity_issue.dart';
 
-class ActivityActivityExportPolicy {
-  ActivityActivityExportPolicy({
+class ActivityExportPolicy {
+  ActivityExportPolicy({
     this.includeNotes = false,
     this.includeCoordinates = false,
     this.includeBookingReferences = false,
@@ -21,7 +21,7 @@ class ActivityActivityExportPolicy {
   final String format;
   final int version;
 
-  factory ActivityActivityExportPolicy.fromJson(Map<String, Object?> json) {
+  factory ActivityExportPolicy.fromJson(Map<String, Object?> json) {
     ActivityCodec.keys(json, {
       "includeNotes",
       "includeCoordinates",
@@ -31,7 +31,7 @@ class ActivityActivityExportPolicy {
       "format",
       "version",
     });
-    final value = ActivityActivityExportPolicy(
+    final value = ActivityExportPolicy(
       includeNotes: ActivityCodec.boolean(json, 'includeNotes') ?? false,
       includeCoordinates:
           ActivityCodec.boolean(json, 'includeCoordinates') ?? false,
@@ -63,12 +63,10 @@ class ActivityActivityExportPolicy {
     return value;
   }
 
-  static ActivityResult<ActivityActivityExportPolicy> tryDecode(Object? input) {
+  static ActivityResult<ActivityExportPolicy> tryDecode(Object? input) {
     try {
       return ActivityResult(
-        value: ActivityActivityExportPolicy.fromJson(
-          ActivityCodec.object(input),
-        ),
+        value: ActivityExportPolicy.fromJson(ActivityCodec.object(input)),
       );
     } on ActivityValidationException catch (e) {
       return ActivityResult(issues: e.issues);
@@ -85,7 +83,7 @@ class ActivityActivityExportPolicy {
     }
   }
 
-  ActivityActivityExportPolicy copyWith({
+  ActivityExportPolicy copyWith({
     Set<String> clear = const {},
     bool? includeNotes,
     bool? includeCoordinates,
@@ -98,7 +96,7 @@ class ActivityActivityExportPolicy {
     final clearableFields = <String>{};
     if (clear.any((key) => !clearableFields.contains(key)))
       throw const FormatException('Only optional fields may be cleared');
-    return ActivityActivityExportPolicy(
+    return ActivityExportPolicy(
       includeNotes: (includeNotes ?? this.includeNotes),
       includeCoordinates: (includeCoordinates ?? this.includeCoordinates),
       includeBookingReferences:
@@ -165,10 +163,10 @@ class ActivityActivityExportPolicy {
 
   @override
   bool operator ==(Object other) =>
-      other is ActivityActivityExportPolicy &&
+      other is ActivityExportPolicy &&
       ActivityCodec.same(toJson(), other.toJson());
   @override
   int get hashCode => ActivityCodec.digest(toJson()).hashCode;
   @override
-  String toString() => 'ActivityActivityExportPolicy(redacted)';
+  String toString() => 'ActivityExportPolicy(redacted)';
 }

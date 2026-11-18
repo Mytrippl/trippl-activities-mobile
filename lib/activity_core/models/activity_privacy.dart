@@ -2,8 +2,8 @@
 import '../activity_codec.dart';
 import '../activity_issue.dart';
 
-class ActivityActivityPrivacy {
-  ActivityActivityPrivacy({
+class ActivityPrivacy {
+  ActivityPrivacy({
     required this.scope,
     required this.updatedAt,
     this.retainHistory = false,
@@ -21,7 +21,7 @@ class ActivityActivityPrivacy {
   final int retentionDays;
   final int revision;
 
-  factory ActivityActivityPrivacy.fromJson(Map<String, Object?> json) {
+  factory ActivityPrivacy.fromJson(Map<String, Object?> json) {
     ActivityCodec.keys(json, {
       "scope",
       "updatedAt",
@@ -31,7 +31,7 @@ class ActivityActivityPrivacy {
       "retentionDays",
       "revision",
     });
-    final value = ActivityActivityPrivacy(
+    final value = ActivityPrivacy(
       scope: ActivityCodec.text(json, 'scope', required: true)!,
       updatedAt: ActivityCodec.date(json, 'updatedAt', required: true)!,
       retainHistory: ActivityCodec.boolean(json, 'retainHistory') ?? false,
@@ -61,10 +61,10 @@ class ActivityActivityPrivacy {
     return value;
   }
 
-  static ActivityResult<ActivityActivityPrivacy> tryDecode(Object? input) {
+  static ActivityResult<ActivityPrivacy> tryDecode(Object? input) {
     try {
       return ActivityResult(
-        value: ActivityActivityPrivacy.fromJson(ActivityCodec.object(input)),
+        value: ActivityPrivacy.fromJson(ActivityCodec.object(input)),
       );
     } on ActivityValidationException catch (e) {
       return ActivityResult(issues: e.issues);
@@ -81,7 +81,7 @@ class ActivityActivityPrivacy {
     }
   }
 
-  ActivityActivityPrivacy copyWith({
+  ActivityPrivacy copyWith({
     Set<String> clear = const {},
     String? scope,
     DateTime? updatedAt,
@@ -94,7 +94,7 @@ class ActivityActivityPrivacy {
     final clearableFields = <String>{};
     if (clear.any((key) => !clearableFields.contains(key)))
       throw const FormatException('Only optional fields may be cleared');
-    return ActivityActivityPrivacy(
+    return ActivityPrivacy(
       scope: (scope ?? this.scope),
       updatedAt: (updatedAt ?? this.updatedAt),
       retainHistory: (retainHistory ?? this.retainHistory),
@@ -156,10 +156,9 @@ class ActivityActivityPrivacy {
 
   @override
   bool operator ==(Object other) =>
-      other is ActivityActivityPrivacy &&
-      ActivityCodec.same(toJson(), other.toJson());
+      other is ActivityPrivacy && ActivityCodec.same(toJson(), other.toJson());
   @override
   int get hashCode => ActivityCodec.digest(toJson()).hashCode;
   @override
-  String toString() => 'ActivityActivityPrivacy(redacted)';
+  String toString() => 'ActivityPrivacy(redacted)';
 }

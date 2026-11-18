@@ -12,7 +12,7 @@ class ActivityQuestion {
     this.travelerScoped = false,
     this.sensitive = false,
     List<ActivityQuestionChoice> choices = const [],
-    this.maximumLength = 500,
+    this.maximumLength = 200,
     this.minimumNumber,
     this.maximumNumber,
     this.revision = 1,
@@ -66,7 +66,7 @@ class ActivityQuestion {
             minimum: 0,
             maximum: 9000000000000,
           ) ??
-          500,
+          200,
       minimumNumber: ActivityCodec.integer(
         json,
         'minimumNumber',
@@ -234,7 +234,7 @@ class ActivityQuestion {
     }
     if (revision < 1 ||
         maximumLength < 1 ||
-        maximumLength > 2000 ||
+        maximumLength > 200 ||
         !{
           'text',
           'choice',

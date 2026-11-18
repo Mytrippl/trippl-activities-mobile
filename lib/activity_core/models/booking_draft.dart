@@ -33,6 +33,9 @@ class ActivityBookingDraft {
     this.state = "editing",
     this.units = 1,
     this.revision = 1,
+    required this.offsetMinutes,
+    this.languageCode,
+    this.quoteRequestFingerprint,
   }) : travelerDetails = List.unmodifiable(travelerDetails),
        questions = List.unmodifiable(questions);
 
@@ -55,6 +58,9 @@ class ActivityBookingDraft {
   final String state;
   final int units;
   final int revision;
+  final int offsetMinutes;
+  final String? languageCode;
+  final String? quoteRequestFingerprint;
 
   factory ActivityBookingDraft.fromJson(Map<String, Object?> json) {
     ActivityCodec.keys(json, {
@@ -77,6 +83,9 @@ class ActivityBookingDraft {
       "state",
       "units",
       "revision",
+      "offsetMinutes",
+      "languageCode",
+      "quoteRequestFingerprint",
     });
     final value = ActivityBookingDraft(
       id: ActivityCodec.text(json, 'id', required: true)!,
@@ -153,6 +162,18 @@ class ActivityBookingDraft {
             maximum: 9000000000000,
           ) ??
           1,
+      offsetMinutes: ActivityCodec.integer(
+        json,
+        'offsetMinutes',
+        required: true,
+        minimum: -840,
+        maximum: 840,
+      )!,
+      languageCode: ActivityCodec.text(json, 'languageCode'),
+      quoteRequestFingerprint: ActivityCodec.text(
+        json,
+        'quoteRequestFingerprint',
+      ),
     );
     final issues = value.validate();
     if (issues.any((i) => i.severity == ActivitySeverity.error))
@@ -201,6 +222,9 @@ class ActivityBookingDraft {
     String? state,
     int? units,
     int? revision,
+    int? offsetMinutes,
+    String? languageCode,
+    String? quoteRequestFingerprint,
   }) {
     final clearableFields = <String>{
       "contact",
@@ -208,6 +232,8 @@ class ActivityBookingDraft {
       "quote",
       "pickup",
       "terms",
+      "languageCode",
+      "quoteRequestFingerprint",
     };
     if (clear.any((key) => !clearableFields.contains(key)))
       throw const FormatException('Only optional fields may be cleared');
@@ -231,6 +257,13 @@ class ActivityBookingDraft {
       state: (state ?? this.state),
       units: (units ?? this.units),
       revision: (revision ?? this.revision),
+      offsetMinutes: (offsetMinutes ?? this.offsetMinutes),
+      languageCode: clear.contains('languageCode')
+          ? null
+          : (languageCode ?? this.languageCode),
+      quoteRequestFingerprint: clear.contains('quoteRequestFingerprint')
+          ? null
+          : (quoteRequestFingerprint ?? this.quoteRequestFingerprint),
     );
   }
 
@@ -412,6 +445,37 @@ class ActivityBookingDraft {
           ),
         );
     }
+    {
+      if (offsetMinutes < -840 || offsetMinutes > 840)
+        validationIssues.add(
+          const ActivityIssue(
+            'offsetMinutes',
+            'range',
+            'Number is outside the activity limits',
+          ),
+        );
+    }
+    if (languageCode != null) {
+      if (languageCode!.trim().isEmpty || languageCode!.length > 4000)
+        validationIssues.add(
+          const ActivityIssue(
+            'languageCode',
+            'text',
+            'Use nonempty bounded text',
+          ),
+        );
+    }
+    if (quoteRequestFingerprint != null) {
+      if (quoteRequestFingerprint!.trim().isEmpty ||
+          quoteRequestFingerprint!.length > 4000)
+        validationIssues.add(
+          const ActivityIssue(
+            'quoteRequestFingerprint',
+            'text',
+            'Use nonempty bounded text',
+          ),
+        );
+    }
     if (revision < 1 ||
         units < 1 ||
         units > 100 ||
@@ -458,6 +522,10 @@ class ActivityBookingDraft {
     "state": state,
     "units": units,
     "revision": revision,
+    "offsetMinutes": offsetMinutes,
+    if (languageCode != null) "languageCode": languageCode,
+    if (quoteRequestFingerprint != null)
+      "quoteRequestFingerprint": quoteRequestFingerprint,
   };
 
   @override

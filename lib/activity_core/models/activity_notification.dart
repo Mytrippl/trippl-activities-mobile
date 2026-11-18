@@ -2,8 +2,8 @@
 import '../activity_codec.dart';
 import '../activity_issue.dart';
 
-class ActivityActivityNotification {
-  ActivityActivityNotification({
+class ActivityNotification {
+  ActivityNotification({
     required this.id,
     required this.scope,
     required this.resourceId,
@@ -25,7 +25,7 @@ class ActivityActivityNotification {
   final bool dismissed;
   final int revision;
 
-  factory ActivityActivityNotification.fromJson(Map<String, Object?> json) {
+  factory ActivityNotification.fromJson(Map<String, Object?> json) {
     ActivityCodec.keys(json, {
       "id",
       "scope",
@@ -37,7 +37,7 @@ class ActivityActivityNotification {
       "dismissed",
       "revision",
     });
-    final value = ActivityActivityNotification(
+    final value = ActivityNotification(
       id: ActivityCodec.text(json, 'id', required: true)!,
       scope: ActivityCodec.text(json, 'scope', required: true)!,
       resourceId: ActivityCodec.text(json, 'resourceId', required: true)!,
@@ -61,12 +61,10 @@ class ActivityActivityNotification {
     return value;
   }
 
-  static ActivityResult<ActivityActivityNotification> tryDecode(Object? input) {
+  static ActivityResult<ActivityNotification> tryDecode(Object? input) {
     try {
       return ActivityResult(
-        value: ActivityActivityNotification.fromJson(
-          ActivityCodec.object(input),
-        ),
+        value: ActivityNotification.fromJson(ActivityCodec.object(input)),
       );
     } on ActivityValidationException catch (e) {
       return ActivityResult(issues: e.issues);
@@ -83,7 +81,7 @@ class ActivityActivityNotification {
     }
   }
 
-  ActivityActivityNotification copyWith({
+  ActivityNotification copyWith({
     Set<String> clear = const {},
     String? id,
     String? scope,
@@ -98,7 +96,7 @@ class ActivityActivityNotification {
     final clearableFields = <String>{};
     if (clear.any((key) => !clearableFields.contains(key)))
       throw const FormatException('Only optional fields may be cleared');
-    return ActivityActivityNotification(
+    return ActivityNotification(
       id: (id ?? this.id),
       scope: (scope ?? this.scope),
       resourceId: (resourceId ?? this.resourceId),
@@ -185,10 +183,10 @@ class ActivityActivityNotification {
 
   @override
   bool operator ==(Object other) =>
-      other is ActivityActivityNotification &&
+      other is ActivityNotification &&
       ActivityCodec.same(toJson(), other.toJson());
   @override
   int get hashCode => ActivityCodec.digest(toJson()).hashCode;
   @override
-  String toString() => 'ActivityActivityNotification(redacted)';
+  String toString() => 'ActivityNotification(redacted)';
 }

@@ -2,8 +2,8 @@
 import '../activity_codec.dart';
 import '../activity_issue.dart';
 
-class ActivityActivityDashboard {
-  ActivityActivityDashboard({
+class ActivityDashboard {
+  ActivityDashboard({
     required this.scope,
     required this.evaluatedAt,
     this.savedCount = 0,
@@ -25,7 +25,7 @@ class ActivityActivityDashboard {
   final int syncPendingCount;
   final int revision;
 
-  factory ActivityActivityDashboard.fromJson(Map<String, Object?> json) {
+  factory ActivityDashboard.fromJson(Map<String, Object?> json) {
     ActivityCodec.keys(json, {
       "scope",
       "evaluatedAt",
@@ -37,7 +37,7 @@ class ActivityActivityDashboard {
       "syncPendingCount",
       "revision",
     });
-    final value = ActivityActivityDashboard(
+    final value = ActivityDashboard(
       scope: ActivityCodec.text(json, 'scope', required: true)!,
       evaluatedAt: ActivityCodec.date(json, 'evaluatedAt', required: true)!,
       savedCount:
@@ -103,10 +103,10 @@ class ActivityActivityDashboard {
     return value;
   }
 
-  static ActivityResult<ActivityActivityDashboard> tryDecode(Object? input) {
+  static ActivityResult<ActivityDashboard> tryDecode(Object? input) {
     try {
       return ActivityResult(
-        value: ActivityActivityDashboard.fromJson(ActivityCodec.object(input)),
+        value: ActivityDashboard.fromJson(ActivityCodec.object(input)),
       );
     } on ActivityValidationException catch (e) {
       return ActivityResult(issues: e.issues);
@@ -123,7 +123,7 @@ class ActivityActivityDashboard {
     }
   }
 
-  ActivityActivityDashboard copyWith({
+  ActivityDashboard copyWith({
     Set<String> clear = const {},
     String? scope,
     DateTime? evaluatedAt,
@@ -138,7 +138,7 @@ class ActivityActivityDashboard {
     final clearableFields = <String>{};
     if (clear.any((key) => !clearableFields.contains(key)))
       throw const FormatException('Only optional fields may be cleared');
-    return ActivityActivityDashboard(
+    return ActivityDashboard(
       scope: (scope ?? this.scope),
       evaluatedAt: (evaluatedAt ?? this.evaluatedAt),
       savedCount: (savedCount ?? this.savedCount),
@@ -257,10 +257,10 @@ class ActivityActivityDashboard {
 
   @override
   bool operator ==(Object other) =>
-      other is ActivityActivityDashboard &&
+      other is ActivityDashboard &&
       ActivityCodec.same(toJson(), other.toJson());
   @override
   int get hashCode => ActivityCodec.digest(toJson()).hashCode;
   @override
-  String toString() => 'ActivityActivityDashboard(redacted)';
+  String toString() => 'ActivityDashboard(redacted)';
 }

@@ -11,7 +11,7 @@ class ActivityDeviceCheckpoint {
     required this.savedAt,
     required this.revision,
     List<ActivitySavedActivity> saved = const [],
-    List<ActivityActivityCollection> collections = const [],
+    List<ActivityCollection> collections = const [],
     List<ActivityCollectionItem> items = const [],
     this.schemaVersion = 1,
   }) : saved = List.unmodifiable(saved),
@@ -22,7 +22,7 @@ class ActivityDeviceCheckpoint {
   final DateTime savedAt;
   final int revision;
   final List<ActivitySavedActivity> saved;
-  final List<ActivityActivityCollection> collections;
+  final List<ActivityCollection> collections;
   final List<ActivityCollectionItem> items;
   final int schemaVersion;
 
@@ -58,7 +58,7 @@ class ActivityDeviceCheckpoint {
           ActivityCodec.list(
             json,
             'collections',
-            (v) => ActivityActivityCollection.fromJson(ActivityCodec.object(v)),
+            (v) => ActivityCollection.fromJson(ActivityCodec.object(v)),
             maximum: 100,
           ) ??
           [],
@@ -111,7 +111,7 @@ class ActivityDeviceCheckpoint {
     DateTime? savedAt,
     int? revision,
     List<ActivitySavedActivity>? saved,
-    List<ActivityActivityCollection>? collections,
+    List<ActivityCollection>? collections,
     List<ActivityCollectionItem>? items,
     int? schemaVersion,
   }) {
