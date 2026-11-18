@@ -53,3 +53,4 @@ export 'activity_core/activity_details.dart';
 export 'activity_core/provider_adapter.dart';
 export 'activity_core/activity_search.dart';
 export 'activity_core/activity_availability.dart';
+export 'activity_core/activity_requests.dart';
