@@ -68,5 +68,6 @@
   "ActivityActivityCollection": "if(revision<1||updatedAt.isBefore(createdAt)||itemIds.toSet().length!=itemIds.length)",
   "ActivityCollectionItem": "if(revision<1||position>100)",
   "ActivityActivityItinerary": "if(revision<1||updatedAt.isBefore(createdAt)||endDate.isBefore(startDate)||endDate.difference(startDate).inDays>90||dayIds.toSet().length!=dayIds.length||!{'draft','ready','archived'}.contains(state))",
-  "ActivityItineraryDay": "if(revision<1||startMinute>1439||endMinute>1440||endMinute<=startMinute||stopIds.toSet().length!=stopIds.length)"
+  "ActivityItineraryDay": "if(revision<1||startMinute>1439||endMinute>1440||endMinute<=startMinute||stopIds.toSet().length!=stopIds.length)",
+  "ActivityItineraryStop": "if(revision<1||!endsAt.isAfter(startsAt)||arrivalBufferMinutes>1440||transferMinutes>1440)"
 }
