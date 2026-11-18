@@ -16,5 +16,53 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityAddress",
+    "address",
+    [
+      [
+        "formatted",
+        "String",
+        false,
+        null
+      ],
+      [
+        "locality",
+        "String",
+        false,
+        null
+      ],
+      [
+        "region",
+        "String",
+        false,
+        null
+      ],
+      [
+        "countryCode",
+        "String",
+        false,
+        null
+      ],
+      [
+        "postalCode",
+        "String",
+        false,
+        null
+      ],
+      [
+        "line1",
+        "String",
+        false,
+        null
+      ],
+      [
+        "language",
+        "String",
+        false,
+        null
+      ]
+    ]
   ]
 ]

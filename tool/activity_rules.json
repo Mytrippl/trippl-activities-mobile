@@ -1,3 +1,4 @@
 {
-  "ActivityCoordinate": "if(latitude< -90 || latitude>90 || longitude< -180 || longitude>180)"
+  "ActivityCoordinate": "if(latitude< -90 || latitude>90 || longitude< -180 || longitude>180)",
+  "ActivityAddress": "if(countryCode!=null&&!RegExp(r'^[A-Z]{2}$').hasMatch(countryCode!))"
 }
