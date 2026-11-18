@@ -3334,5 +3334,65 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityQuoteChange",
+    "quote_change",
+    [
+      [
+        "draftId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "evaluatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "oldTotal",
+        "ActivityMoney",
+        true,
+        null
+      ],
+      [
+        "newTotal",
+        "ActivityMoney",
+        true,
+        null
+      ],
+      [
+        "amountChanged",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "currencyChanged",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "selectionChanged",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "requiresAcceptance",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "reasonCodes",
+        "List<String>",
+        false,
+        []
+      ]
+    ]
   ]
 ]

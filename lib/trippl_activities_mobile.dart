@@ -76,3 +76,4 @@ export 'activity_core/models/booking_record.dart';
 export 'activity_core/models/booking_event.dart';
 export 'activity_core/models/reconciliation.dart';
 export 'activity_core/models/confirmation_policy.dart';
+export 'activity_core/models/quote_change.dart';
