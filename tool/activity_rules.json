@@ -20,5 +20,6 @@
   "ActivityCancellationPolicy": "if(!{'unknown','standard','custom','nonRefundable'}.contains(kind)||observedAt!=null&&expiresAt!=null&&!expiresAt!.isAfter(observedAt!)||tiers.map((t)=>t.id).toSet().length!=tiers.length)",
   "ActivityCancellationAssessment": "if(!{'unknown','free','partial','nonRefundable','expired'}.contains(state))",
   "ActivityMeetingPoint": "if(arrivalMinutesBefore>1440)",
-  "ActivityPickup": "if(pointIds.toSet().length!=pointIds.length||included&&!available)"
+  "ActivityPickup": "if(pointIds.toSet().length!=pointIds.length||included&&!available)",
+  "ActivityInclusion": "if(!{'admission','transport','guide','food','equipment','other'}.contains(category))"
 }

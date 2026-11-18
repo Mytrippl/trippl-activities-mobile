@@ -1066,5 +1066,41 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityInclusion",
+    "inclusion",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "description",
+        "String",
+        true,
+        null
+      ],
+      [
+        "included",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "category",
+        "String",
+        false,
+        "other"
+      ],
+      [
+        "optionId",
+        "String",
+        false,
+        null
+      ]
+    ]
   ]
 ]
