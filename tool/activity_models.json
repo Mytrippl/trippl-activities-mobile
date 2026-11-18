@@ -2194,5 +2194,65 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivitySearchResult",
+    "search_result",
+    [
+      [
+        "evaluatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "resultFingerprint",
+        "String",
+        true,
+        null
+      ],
+      [
+        "matchedCount",
+        "int",
+        true,
+        null
+      ],
+      [
+        "products",
+        "List<ActivityProduct>",
+        false,
+        []
+      ],
+      [
+        "offset",
+        "int",
+        false,
+        0
+      ],
+      [
+        "limit",
+        "int",
+        false,
+        20
+      ],
+      [
+        "hasMore",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "incomplete",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "warningCodes",
+        "List<String>",
+        false,
+        []
+      ]
+    ]
   ]
 ]
