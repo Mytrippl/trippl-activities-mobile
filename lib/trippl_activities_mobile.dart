@@ -98,3 +98,4 @@ export 'activity_core/models/activity_preference.dart';
 export 'activity_core/models/activity_privacy.dart';
 export 'activity_core/models/activity_consent.dart';
 export 'activity_core/models/history_entry.dart';
+export 'activity_core/models/sync_mutation.dart';
