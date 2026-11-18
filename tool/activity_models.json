@@ -3562,5 +3562,65 @@
         true
       ]
     ]
+  ],
+  [
+    "ActivityCancellationRequest",
+    "cancellation_request",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "bookingId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "expectedRevision",
+        "int",
+        true,
+        null
+      ],
+      [
+        "createdAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "idempotencyKey",
+        "String",
+        true,
+        null
+      ],
+      [
+        "reasonCode",
+        "String",
+        true,
+        null
+      ],
+      [
+        "confirmedByUser",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "assessmentDigest",
+        "String",
+        false,
+        null
+      ]
+    ]
   ]
 ]
