@@ -916,5 +916,59 @@
         []
       ]
     ]
+  ],
+  [
+    "ActivityMeetingPoint",
+    "meeting_point",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "name",
+        "String",
+        true,
+        null
+      ],
+      [
+        "coordinate",
+        "ActivityCoordinate",
+        false,
+        null
+      ],
+      [
+        "address",
+        "ActivityAddress",
+        false,
+        null
+      ],
+      [
+        "instructions",
+        "String",
+        false,
+        null
+      ],
+      [
+        "arrivalMinutesBefore",
+        "int",
+        false,
+        0
+      ],
+      [
+        "confirmed",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "optionId",
+        "String",
+        false,
+        null
+      ]
+    ]
   ]
 ]
