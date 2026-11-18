@@ -3970,5 +3970,47 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityCollectionItem",
+    "collection_item",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "collectionId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "savedActivityId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "addedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "position",
+        "int",
+        false,
+        0
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]

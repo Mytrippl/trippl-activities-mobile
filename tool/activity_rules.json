@@ -65,5 +65,6 @@
   "ActivityRefundRecord": "if(revision<1||!{'pending','processed','failed','unknown'}.contains(state)||state=='processed'&&completedAt==null)",
   "ActivitySupportCase": "if(revision<1||updatedAt.isBefore(createdAt)||summary.length>1000||!{'booking','pickup','voucher','cancellation','refund','other'}.contains(category)||!{'draft','submitted','open','resolved'}.contains(state))",
   "ActivitySavedActivity": "if(revision<1||priority>5||updatedAt.isBefore(savedAt)||note!=null&&note!.length>2000)",
-  "ActivityActivityCollection": "if(revision<1||updatedAt.isBefore(createdAt)||itemIds.toSet().length!=itemIds.length)"
+  "ActivityActivityCollection": "if(revision<1||updatedAt.isBefore(createdAt)||itemIds.toSet().length!=itemIds.length)",
+  "ActivityCollectionItem": "if(revision<1||position>100)"
 }
