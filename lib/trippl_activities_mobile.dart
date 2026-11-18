@@ -121,3 +121,4 @@ export 'activity_core/booking_transport.dart';
 export 'activity_core/booking_controller.dart';
 export 'activity_core/booking_reconciliation.dart';
 export 'activity_core/booking_vouchers.dart';
+export 'activity_core/booking_cancellations.dart';
