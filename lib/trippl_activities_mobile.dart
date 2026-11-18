@@ -128,3 +128,4 @@ export 'activity_core/saved_activity_library.dart';
 export 'activity_core/activity_itineraries.dart';
 export 'activity_core/booking_reminders.dart';
 export 'activity_core/activity_preferences.dart';
+export 'activity_core/activity_privacy.dart';
