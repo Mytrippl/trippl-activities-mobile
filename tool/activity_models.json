@@ -4078,5 +4078,59 @@
         "draft"
       ]
     ]
+  ],
+  [
+    "ActivityItineraryDay",
+    "itinerary_day",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "itineraryId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "date",
+        "day",
+        true,
+        null
+      ],
+      [
+        "offsetMinutes",
+        "signedInt",
+        true,
+        null
+      ],
+      [
+        "stopIds",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "startMinute",
+        "int",
+        false,
+        480
+      ],
+      [
+        "endMinute",
+        "int",
+        false,
+        1320
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]
