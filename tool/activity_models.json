@@ -4522,5 +4522,59 @@
         1
       ]
     ]
+  ],
+  [
+    "ActivityHistoryEntry",
+    "history_entry",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "kind",
+        "String",
+        true,
+        null
+      ],
+      [
+        "resourceId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "occurredAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "text",
+        "String",
+        false,
+        null
+      ],
+      [
+        "count",
+        "int",
+        false,
+        1
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]
