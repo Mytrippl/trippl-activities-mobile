@@ -1,0 +1,84 @@
+{
+  "lib/custom_code/functions/activity_age_bands.dart": {
+    "activityAgeBands": "dynamicproductDetails"
+  },
+  "lib/custom_code/functions/activity_availability_search_body.dart": {
+    "activityAvailabilitySearchBody": "int?adult,int?senior,int?youth,int?child,int?infant,int?traveler,ActivityPricingTypepriceType,Stringcurrency,StringproductCode,StringproductOptionCode,DateTimetravelDate,"
+  },
+  "lib/custom_code/functions/activity_availability_summary.dart": {
+    "activityAvailabilitySummary": "dynamicavailability,int?requestedTravelers,",
+    "_availabilitySlots": "Map<String,dynamic>map,",
+    "_availabilityInt": "Map<String,dynamic>map,List<String>keys,",
+    "_availabilityBool": "Map<String,dynamic>map,List<String>keys,"
+  },
+  "lib/custom_code/functions/activity_option_name.dart": {
+    "activityOptionName": "StringproductTitle,dynamicitem,"
+  },
+  "lib/custom_code/functions/activity_price_summary.dart": {
+    "activityPriceSummary": "dynamicactivity,int?travelerCount,",
+    "_normalizePricingType": "String?value",
+    "_priceNumber": "Map<String,dynamic>map,List<String>keys,",
+    "_priceString": "Map<String,dynamic>map,List<String>keys,"
+  },
+  "lib/custom_code/functions/activity_pricing_type.dart": {
+    "activityPricingType": "dynamicpricingType"
+  },
+  "lib/custom_code/functions/activity_rating_box_color.dart": {
+    "activityRatingBoxColor": "dynamicrating,inttype,"
+  },
+  "lib/custom_code/functions/activity_search_request.dart": {
+    "activitySearchRequest": "String?destinationId,String?productId,DateTime?startDate,DateTime?endDate,int?adults,int?children,int?infants,String?currency,String?language,int?page,int?pageSize,double?minPrice,double?maxPrice,double?minRating,bool?freeCancellation,",
+    "_addActivityRequestString": "Map<String,dynamic>target,Stringkey,String?value,",
+    "_activityDate": "DateTimedate"
+  },
+  "lib/custom_code/functions/activity_search_type.dart": {
+    "activitySearchType": "dynamictype"
+  },
+  "lib/custom_code/functions/activity_traveler_validation.dart": {
+    "activityTravelerValidation": "List<dynamic>?ageBands,List<int>?travelerAges,int?minimumTravelers,int?maximumTravelers,",
+    "_normalizeAgeBands": "List<dynamic>?ageBands,",
+    "_travelerAge": "dynamicvalue"
+  },
+  "lib/custom_code/functions/activityget_total_guests.dart": {
+    "activitygetTotalGuests": "List<dynamic>?guests"
+  },
+  "lib/custom_code/functions/attraction_distance_text.dart": {
+    "attractionDistanceText": "double?distanceMeters,StringlanguageCode,"
+  },
+  "lib/custom_code/functions/attraction_price_level_text.dart": {
+    "attractionPriceLevelText": "dynamicpriceLevel,StringlanguageCode,"
+  },
+  "lib/custom_code/functions/filter_activity_results.dart": {
+    "filterActivityResults": "List<dynamic>?activities,double?minPrice,double?maxPrice,double?minRating,bool?freeCancellationOnly,bool?instantConfirmationOnly,int?minDurationMinutes,int?maxDurationMinutes,String?guideLanguage,",
+    "_activityNumber": "Map<String,dynamic>map,List<String>keys,",
+    "_activityInt": "Map<String,dynamic>map,List<String>keys,",
+    "_activityBool": "Map<String,dynamic>map,List<String>keys,",
+    "_activityLanguages": "Map<String,dynamic>map,"
+  },
+  "lib/custom_code/functions/get_attraction_price_level.dart": {
+    "getAttractionPriceLevel": "dynamicvalue"
+  },
+  "lib/custom_code/functions/sort_activity_results.dart": {
+    "sortActivityResults": "List<dynamic>?activities,String?sortType,",
+    "_sortActivityNumber": "Map<String,dynamic>first,Map<String,dynamic>second,List<String>keys,{requiredboolascending,}",
+    "_sortValue": "Map<String,dynamic>map,List<String>keys,"
+  },
+  "lib/custom_code/functions/trippl_acticityguide_language_title.dart": {
+    "tripplActicityguideLanguageTitle": "List<dynamic>?languages,Stringlocale,"
+  },
+  "lib/custom_code/functions/trippl_activites_price_label.dart": {
+    "tripplActivitesPriceLabel": "dynamicprice,Currency?currency,Stringlocale,"
+  },
+  "lib/custom_code/functions/trippl_activites_rating_double.dart": {
+    "tripplActivitesRatingDouble": "dynamicrating"
+  },
+  "lib/custom_code/functions/trippl_activity_cancellation_summary.dart": {
+    "tripplActivityCancellationSummary": "dynamiccancellationType,Stringlocale,intmode,"
+  },
+  "lib/custom_code/functions/trippl_activity_duration_summary.dart": {
+    "tripplActivityDurationSummary": "dynamicdurationMinutes,Stringlocale,int?mode,"
+  },
+  "lib/custom_code/functions/trippl_activityguide_language.dart": {
+    "tripplActivityguideLanguage": "dynamiclanguageCode"
+  }
+}

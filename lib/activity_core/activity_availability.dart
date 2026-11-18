@@ -11,6 +11,11 @@ class ActivityInventory {
     ActivityGuard.record(option.validate());
     ActivityGuard.record(request.validate());
     ActivityGuard.canonicalDay(request.travelDate);
+    if (request.travelers.travelers.isEmpty) {
+      throw const FormatException(
+        'Availability requires at least one traveler',
+      );
+    }
     if (offsetMinutes.abs() > 840)
       throw const FormatException('Invalid activity UTC offset');
     if (request.productId != option.productId || request.optionId != option.id)
