@@ -3394,5 +3394,59 @@
         []
       ]
     ]
+  ],
+  [
+    "ActivityVoucherDocument",
+    "voucher_document",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "bookingId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "kind",
+        "String",
+        true,
+        null
+      ],
+      [
+        "uri",
+        "String",
+        false,
+        null
+      ],
+      [
+        "text",
+        "String",
+        false,
+        null
+      ],
+      [
+        "expiresAt",
+        "instant",
+        false,
+        null
+      ],
+      [
+        "attributions",
+        "List<ActivityAttribution>",
+        false,
+        []
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]

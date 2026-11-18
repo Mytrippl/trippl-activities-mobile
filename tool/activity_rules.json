@@ -57,5 +57,6 @@
   "ActivityBookingRecord": "if(revision<1||updatedAt.isBefore(createdAt)||!{'pending','confirmed','rejected','cancelPending','cancelled','unknown'}.contains(state))",
   "ActivityBookingEvent": "if(revision<1||!{'submitted','pending','confirmed','rejected','cancelRequested','cancelled','reconciled','unknown'}.contains(kind))",
   "ActivityReconciliation": "if(remoteRevision<1)",
-  "ActivityConfirmationPolicy": "if(version!=1||maximumQuoteAgeSeconds<1||maximumQuoteAgeSeconds>3600||maximumAttempts<1||maximumAttempts>5)"
+  "ActivityConfirmationPolicy": "if(version!=1||maximumQuoteAgeSeconds<1||maximumQuoteAgeSeconds>3600||maximumAttempts<1||maximumAttempts>5)",
+  "ActivityVoucherDocument": "if(revision<1||!{'link','text','barcode'}.contains(kind)||kind=='link'&&uri==null||kind!='link'&&text==null)"
 }
