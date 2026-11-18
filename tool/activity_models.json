@@ -1822,5 +1822,47 @@
         []
       ]
     ]
+  ],
+  [
+    "ActivityProviderFailure",
+    "provider_failure",
+    [
+      [
+        "code",
+        "String",
+        true,
+        null
+      ],
+      [
+        "occurredAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "retryable",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "retryAfterSeconds",
+        "int",
+        false,
+        null
+      ],
+      [
+        "requiresReview",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "operation",
+        "String",
+        false,
+        "read"
+      ]
+    ]
   ]
 ]

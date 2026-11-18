@@ -34,3 +34,4 @@ export 'activity_core/models/search_filter.dart';
 export 'activity_core/models/search_sort.dart';
 export 'activity_core/models/provider_request.dart';
 export 'activity_core/models/provider_page.dart';
+export 'activity_core/models/provider_failure.dart';
