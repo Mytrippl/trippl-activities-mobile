@@ -970,5 +970,53 @@
         null
       ]
     ]
+  ],
+  [
+    "ActivityPickup",
+    "pickup",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "available",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "included",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "requiresSelection",
+        "bool",
+        false,
+        false
+      ],
+      [
+        "pointIds",
+        "List<String>",
+        false,
+        []
+      ],
+      [
+        "instructions",
+        "String",
+        false,
+        null
+      ],
+      [
+        "cutoffAt",
+        "instant",
+        false,
+        null
+      ]
+    ]
   ]
 ]
