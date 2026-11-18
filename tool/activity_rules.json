@@ -61,5 +61,6 @@
   "ActivityVoucherDocument": "if(revision<1||!{'link','text','barcode'}.contains(kind)||kind=='link'&&uri==null||kind!='link'&&text==null)",
   "ActivityVoucher": "if(revision<1||!validUntil.isAfter(validFrom)||documents.any((d)=>d.bookingId!=bookingId)||documents.map((d)=>d.id).toSet().length!=documents.length)",
   "ActivityCancellationRequest": "if(expectedRevision<1||!RegExp(r'^[a-f0-9]{64}$').hasMatch(idempotencyKey)||!RegExp(r'^[A-Za-z0-9_-]{1,80}$').hasMatch(reasonCode))",
-  "ActivityCancellationResult": "if(revision<1||!{'pending','cancelled','rejected','unknown'}.contains(state))"
+  "ActivityCancellationResult": "if(revision<1||!{'pending','cancelled','rejected','unknown'}.contains(state))",
+  "ActivityRefundRecord": "if(revision<1||!{'pending','processed','failed','unknown'}.contains(state)||state=='processed'&&completedAt==null)"
 }

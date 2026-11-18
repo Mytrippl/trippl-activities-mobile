@@ -83,3 +83,4 @@ export 'activity_core/models/voucher_access.dart';
 export 'activity_core/models/cancellation_request.dart';
 export 'activity_core/models/cancellation_result.dart';
 export 'activity_core/models/refund_estimate.dart';
+export 'activity_core/models/refund_record.dart';

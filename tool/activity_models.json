@@ -3730,5 +3730,65 @@
         []
       ]
     ]
+  ],
+  [
+    "ActivityRefundRecord",
+    "refund_record",
+    [
+      [
+        "id",
+        "String",
+        true,
+        null
+      ],
+      [
+        "scope",
+        "String",
+        true,
+        null
+      ],
+      [
+        "bookingId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "amount",
+        "ActivityMoney",
+        true,
+        null
+      ],
+      [
+        "observedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "state",
+        "String",
+        true,
+        null
+      ],
+      [
+        "providerReference",
+        "String",
+        false,
+        null
+      ],
+      [
+        "revision",
+        "int",
+        false,
+        1
+      ],
+      [
+        "completedAt",
+        "instant",
+        false,
+        null
+      ]
+    ]
   ]
 ]
