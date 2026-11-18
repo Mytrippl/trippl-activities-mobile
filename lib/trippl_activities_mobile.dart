@@ -61,3 +61,4 @@ export 'activity_core/activity_presentation.dart';
 export 'activity_core/activity_comparison.dart';
 export 'activity_core/activity_workspace.dart';
 export 'activity_core/models/question_choice.dart';
+export 'activity_core/models/question.dart';
