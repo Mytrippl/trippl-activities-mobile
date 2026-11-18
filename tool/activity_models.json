@@ -1864,5 +1864,59 @@
         "read"
       ]
     ]
+  ],
+  [
+    "ActivityDiscoveryState",
+    "discovery_state",
+    [
+      [
+        "requestId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "scopeFingerprint",
+        "String",
+        true,
+        null
+      ],
+      [
+        "updatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "state",
+        "String",
+        true,
+        null
+      ],
+      [
+        "page",
+        "ActivityProviderPage",
+        false,
+        null
+      ],
+      [
+        "failure",
+        "ActivityProviderFailure",
+        false,
+        null
+      ],
+      [
+        "generation",
+        "int",
+        false,
+        1
+      ],
+      [
+        "attempt",
+        "int",
+        false,
+        1
+      ]
+    ]
   ]
 ]

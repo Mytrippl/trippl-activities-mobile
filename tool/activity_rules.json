@@ -32,5 +32,6 @@
   "ActivitySearchSort": "if(!{'recommended','price','rating','reviewCount','duration','distance','title'}.contains(field)||tieBreak!='id')",
   "ActivityProviderRequest": "if(!{'search','details','availability','quote'}.contains(mode)||limit<1||limit>100||scope.length>120||mode=='search'&&query==null||mode=='details'&&productId==null||(mode=='availability'||mode=='quote')&&availability==null)",
   "ActivityProviderPage": "if(!expiresAt.isAfter(observedAt)||complete&&cursor!=null||!RegExp(r'^[a-f0-9]{64}$').hasMatch(requestFingerprint)||products.map((p)=>p.id).toSet().length!=products.length||slots.map((s)=>s.id).toSet().length!=slots.length)",
-  "ActivityProviderFailure": "if(!RegExp(r'^[A-Za-z0-9_-]{1,80}$').hasMatch(code)||operation!='read'||retryAfterSeconds!=null&&retryAfterSeconds!>120)"
+  "ActivityProviderFailure": "if(!RegExp(r'^[A-Za-z0-9_-]{1,80}$').hasMatch(code)||operation!='read'||retryAfterSeconds!=null&&retryAfterSeconds!>120)",
+  "ActivityDiscoveryState": "if(generation<1||attempt<1||attempt>3||!{'loading','ready','failed','cancelled'}.contains(state)||state=='ready'&&page==null||state=='failed'&&failure==null||!RegExp(r'^[a-f0-9]{64}$').hasMatch(scopeFingerprint))"
 }
