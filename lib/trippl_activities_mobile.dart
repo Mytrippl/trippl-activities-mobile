@@ -78,3 +78,4 @@ export 'activity_core/models/reconciliation.dart';
 export 'activity_core/models/confirmation_policy.dart';
 export 'activity_core/models/quote_change.dart';
 export 'activity_core/models/voucher_document.dart';
+export 'activity_core/models/voucher.dart';
