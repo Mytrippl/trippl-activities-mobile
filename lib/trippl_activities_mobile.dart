@@ -19,3 +19,4 @@ export 'activity_core/models/price_quote.dart';
 export 'activity_core/models/price_breakdown.dart';
 export 'activity_core/models/cancellation_tier.dart';
 export 'activity_core/models/cancellation_policy.dart';
+export 'activity_core/models/cancellation_assessment.dart';

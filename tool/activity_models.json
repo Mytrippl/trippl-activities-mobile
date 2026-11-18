@@ -862,5 +862,59 @@
         true
       ]
     ]
+  ],
+  [
+    "ActivityCancellationAssessment",
+    "cancellation_assessment",
+    [
+      [
+        "policyId",
+        "String",
+        true,
+        null
+      ],
+      [
+        "evaluatedAt",
+        "instant",
+        true,
+        null
+      ],
+      [
+        "state",
+        "String",
+        false,
+        "unknown"
+      ],
+      [
+        "refund",
+        "ActivityMoney",
+        false,
+        null
+      ],
+      [
+        "fee",
+        "ActivityMoney",
+        false,
+        null
+      ],
+      [
+        "deadlineAt",
+        "instant",
+        false,
+        null
+      ],
+      [
+        "requiresReview",
+        "bool",
+        false,
+        true
+      ],
+      [
+        "warningCodes",
+        "List<String>",
+        false,
+        []
+      ]
+    ]
   ]
 ]

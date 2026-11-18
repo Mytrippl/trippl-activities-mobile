@@ -17,5 +17,6 @@
   "ActivityPriceQuote": "if(revision<1||!expiresAt.isAfter(observedAt)||!RegExp(r'^[a-f0-9]{64}$').hasMatch(requestFingerprint))",
   "ActivityPriceBreakdown": "if(travelerCount<1||travelerCount>100||!{'perPerson','perGroup','perUnit','unknown'}.contains(basis))",
   "ActivityCancellationTier": "if(refundBasisPoints>10000)",
-  "ActivityCancellationPolicy": "if(!{'unknown','standard','custom','nonRefundable'}.contains(kind)||observedAt!=null&&expiresAt!=null&&!expiresAt!.isAfter(observedAt!)||tiers.map((t)=>t.id).toSet().length!=tiers.length)"
+  "ActivityCancellationPolicy": "if(!{'unknown','standard','custom','nonRefundable'}.contains(kind)||observedAt!=null&&expiresAt!=null&&!expiresAt!.isAfter(observedAt!)||tiers.map((t)=>t.id).toSet().length!=tiers.length)",
+  "ActivityCancellationAssessment": "if(!{'unknown','free','partial','nonRefundable','expired'}.contains(state))"
 }
